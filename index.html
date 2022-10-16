@@ -1,0 +1,2172 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Yeon-ju Jin</title>
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@700&display=swap" rel="stylesheet">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+	<style type="text/css">
+	*{margin:0;padding:0;font-family: 'Noto Sans KR', sans-serif;}
+	a{display:block;text-decoration:none;color:black;}
+	img{border:0;}
+	::selection { color:black; background:#49ff95; }
+	section>div {
+		font-family: 'Open Sans';
+		font-style: normal;
+		text-align: center;
+		position: relative;
+		top: 0;
+		width:100%;
+		height:100%;
+		overflow: hidden;
+		}
+
+
+body, html {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.scroll-container {
+	width: 100%;
+	height: 100%;
+	position: relative;
+	margin: 0;
+	padding: 0;
+}
+
+.scroll-container section {
+	width: 100%;
+	height: 100%;
+}
+
+.dots {	
+	width:5%;
+	height:101%;
+	background-color:#78C7FF;
+	z-index: 100000;
+	list-style: none;
+	position: absolute;	
+    top: 50%;
+	right:0;
+    -webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+	padding-top:20%;
+}
+.dots li {
+	width:100%;
+	height:10%;
+}
+
+.dots li a {
+	padding: 10px;
+	width: 50%;
+	height: 50%;
+	display: block;
+}
+.dots li:nth-child(1) a:before{
+	content:'H';
+}
+.dots li:nth-child(1):hover > a:before{
+	content:'HOME';
+	transform:translateX(20px);
+}
+
+.dots li:nth-child(2) a:before{
+	content:'W';
+}
+.dots li:nth-child(2):hover > a:before{
+	content:'WEB';
+	transform:translateX(15px);
+}
+.dots li:nth-child(3) a:before{
+	content:'U';
+}
+.dots li:nth-child(3):hover > a:before{
+	content:'UI&UX';
+	transform:translateX(25px);
+}
+.dots li:nth-child(4) a:before{
+	content:'D';
+}
+.dots li:nth-child(4):hover > a:before{
+	content:'DESIGN';
+	transform:translateX(30px);
+}
+.dots li:nth-child(5) a:before{
+	content:'P';
+}
+.dots li:nth-child(5):hover > a:before{
+	content:'PROFILE';
+	transform:translateX(30px);
+}
+.dots li:nth-child(6) a:before{
+	content:'C';
+}
+.dots li:nth-child(6):hover > a:before{
+	content:'CONTACT';
+	transform:translateX(40px);
+}
+.dots li:nth-child(1) a.active:before {
+	content:'H';
+	transform:none;
+}
+.dots li:nth-child(2) a.active:before {
+	content:'W';
+	transform:none;
+}
+.dots li:nth-child(3) a.active:before {
+	content:'U';
+	transform:none;
+}
+.dots li:nth-child(4) a.active:before {
+	content:'D';
+	transform:none;
+}
+.dots li:nth-child(5) a.active:before {
+	content:'P';
+	transform:none;
+}
+.dots li:nth-child(6) a.active:before {
+	content:'C';
+	transform:none;
+}
+.dots li a:before {
+	font-family: 'Jua', sans-serif;
+	font-size:20px;
+	position: absolute;
+	right:45%;
+	color: white;
+	-webkit-transition: -webkit-transform 0.3s ease, background-color 0.3s ease;
+	-moz-transition: -moz-transform 0.3s ease, background-color 0.3s ease;
+	-ms-transition: -ms-transform 0.3s ease, background-color 0.3s ease;
+	-o-transition: -o-transform 0.3s ease, background-color 0.3s ease;
+	transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.dots li a.active:before {
+	font-size:40px;
+	font-weight:bold;
+	color: #FEDC00;
+	margin-top:-4px;
+	right:35%; 	
+	-webkit-transform: scale(1.0);
+	-moz-transform: scale(1.0);
+	-ms-transform: scale(1.0);
+	-o-transform: scale(1.0);
+	transform: scale(1.0);
+}
+
+.dots-right {
+	left: 25px;
+}
+
+.dots-left {
+	right: ;
+}
+
+li, ul{
+	list-style:none;
+}
+a{
+	text-decoration:none;
+}
+.title{
+	margin:10px auto;
+	height:100px;
+	box-sizing:border-box;
+}
+.section2 .title{
+	width:330px;
+}
+.section3 .title{
+	width:430px;
+}
+.section4 .title{
+	width:405px;
+}
+.section5 .title{
+	width:290px;
+}
+
+.title span{
+	font-size:60px;
+	float: left;
+	font-family: 'Lobster', cursive;
+	margin-top:30px;
+}
+.section1{
+	overflow:hidden;
+}
+h1{
+	position:absolute;
+	z-index:100;
+	font-size:90px;
+	color:#49ff95;
+	left:30%;
+	top:400px;
+	font-family: 'Lobster', cursive;
+	text-shadow:4px 4px white;
+}
+.section1 span {
+        border-right: .05em solid;
+        animation: caret 1s steps(1) infinite;
+        }
+
+@keyframes caret {
+    50% {
+        border-color: transparent;
+        }
+}
+#mainscroll{
+	width:300px;
+	height:100px;
+	position:absolute;
+	z-index:1000;
+	top:800px;
+	left:40%;
+	
+}
+#mainscroll p{
+	color:white;
+}
+
+.arrowCta {
+  display: block;
+  height: 40px;
+  width: 40px;
+  border: 11px solid transparent;
+  transform: rotate(45deg);
+  position: relative;
+  margin:0 auto;
+}
+
+.arrowCta:after,
+.arrowCta:before {
+  content: "";
+  display: block;
+  height: inherit;
+  width: inherit;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.arrowCta:after {
+  border-bottom: 2px solid white;
+  border-right: 2px solid white;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  animation: bottom-arrow 1.65s infinite;
+}
+
+@keyframes bottom-arrow {
+  0% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+  45% {
+    opacity: 0;
+    transform: translate(12px, 12px);
+  }
+  46% {
+    opacity: 0;
+    transform: translate(-16px, -16px);
+  }
+  90% {
+    opacity: 1;
+    transform: translate(-6px, -6px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-6px, -6px);
+  }
+}
+
+.arrowCta:before {
+  top: 0;
+  left: 0;
+  border-bottom: 2px solid white;
+  border-right: 2px solid white;
+  animation: top-arrow 1.65s infinite;
+}
+
+@keyframes top-arrow {
+  0% {
+    transform: translate(-6px, -6px);
+  }
+  35% {
+    transform: translate(0, 0);
+  }
+  90% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+.slider {
+	
+    width:95%;
+    height:800px;
+    margin-right:5%;
+}
+
+.slide_viewer {
+  height:800px;
+  overflow: hidden;
+  position: relative;
+  bottom:0;
+}
+
+.slide_group {
+  height: 100%;
+  position: relative;
+  width: 100%;
+  bottom:0;
+}
+
+.slide {
+  display: none;
+  height: 100%;
+  position: absolute;
+  width: 100%;
+  top:0;
+}
+
+.slide:first-child {
+  display: block;
+}
+
+
+.slide_buttons {
+  left: 0;
+  position: relative;
+  right: 0;
+  text-align: center;
+  bottom:0;
+}
+
+a.slide_btn {
+	display:block;
+	float: left;
+	width:9.5%;
+	height:50px;
+	color: white;
+	background-color: #78C7FF;
+	font-size: 20px;
+	-webkit-transition: all 0.3s ease-in-out;
+	-moz-transition: all 0.3s ease-in-out;
+	-ms-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+.slide_buttons a{
+	padding-top:15px;
+	font-size:15px;
+	box-sizing:border-box;
+}
+.slide_buttons a:nth-child(1):before{
+	content:'ASUS';
+}
+.slide_buttons a:nth-child(2):before{
+	content:'THE CONRAN SHOP';
+
+}
+.slide_buttons a:nth-child(3):before{
+	content:'ETERNAL RETURN';
+}
+.slide_buttons a:nth-child(4):before{
+	content:'Spotify';
+}
+.slide_buttons a:nth-child(5):before{
+	content:'MINI';
+}
+.slide_buttons a:nth-child(6):before{
+	content:'WM Entertainment';
+}
+.slide_buttons a:nth-child(7):before{
+	content:'Aesop';
+}
+.slide_buttons a:nth-child(8):before{
+	content:'Twosome Place';
+}
+.slide_buttons a:nth-child(9):before{
+	content:'Wiggle-Wiggle';
+}
+.slide_buttons a:nth-child(10):before{
+	content:'KaKao';
+}
+
+.slide_btn.active, .slide_btn:hover {
+  color: black;
+  cursor: pointer;
+  background-color:#FEDC00;
+}
+
+.directional_nav {
+  width:100%;
+  height:10%;
+  margin: 0 auto;
+  position: relative;
+  top: -340px;
+}
+
+.previous_btn {
+ 
+  left: 100px;
+  margin: auto;
+  position: absolute;
+  
+}
+
+.next_btn {
+
+  margin: auto;
+  position: absolute;
+  right: 200px;
+}
+
+.previous_btn, .next_btn {
+  cursor: pointer;
+  height: 65px;
+  opacity: 0.5;
+  -webkit-transition: opacity 0.4s ease-in-out;
+  -moz-transition: opacity 0.4s ease-in-out;
+  -ms-transition: opacity 0.4s ease-in-out;
+  -o-transition: opacity 0.4s ease-in-out;
+  transition: opacity 0.4s ease-in-out;
+  width: 65px;
+}
+
+.previous_btn:hover, .next_btn:hover {
+  opacity: 1;
+}
+
+@media only screen and (max-width: 767px) {
+  .previous_btn {
+    left: 50px;
+  }
+  .next_btn {
+    right: 50px;
+  }
+}
+.menu{
+	width:5%;
+	height:101%;;
+	position:absolute;
+	top:0;
+	right:0;
+	z-index: 2;
+}
+.slide>img{
+	width:70%;
+	height:auto;
+}
+
+#GRAPHIC{
+    width:100%;
+    height:1000px;
+    background:url(../image/graphic1_bg.png) no-repeat;
+    background-size:cover;
+    -webkit-background-size:cover;
+	-ms-background-size:cover;
+	-moz-background-size:cover;
+	margin-top:-30px;
+	box-sizing: border-box;
+}
+
+
+
+/* ----------Graphic(배열영역) */
+.GRAPHIC_in{
+	width:95%;
+	margin-right:5%;
+}
+.photo_illu{
+	width:1120px;
+	margin:0 auto;
+}
+
+.photo_illu li{ /*포토샵, 일러스트*/
+	position:relative;
+	width:220px;
+	height:220px;
+	float:left;
+    box-shadow:1px 1px 1px #555;
+	margin:40px 20px 0 20px;
+	overflow:hidden;
+	border:7px solid #78C7FF;
+	
+}
+
+.photo_illu li img{ /*포토샵, 일러스트*/
+	display:block;
+	width:100%;
+	height:220px;
+	background-size:contain;
+	transition:all 0.7s ease;
+    -webkit-transition:all 0.7s ease;
+	-ms-transition:all 0.7s ease;
+	-moz-transition:all 0.7s ease;
+}
+
+.photo_illu li:hover img{
+    transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+	-ms-transform: scale(1.1);
+	-moz-transform: scale(1.1);
+}
+
+.up_txt{/*올라오는 박스*/
+    position:absolute;
+	left:0;
+	bottom:-20px;
+	width:100%;
+	height:0;
+	background:#78C7FF;
+	opacity:0;
+	transition:all 0.3s;
+    -webkit-transition:all 0.3s;
+	-ms-transition:all 0.3s;
+	-moz-transition:all 0.3s;
+}
+
+.up_txt p{ /*올라오는 박스의 텍스트*/
+    color:#fff;
+    font-size:20px;
+    font-family: 'Jua', sans-serif;
+	line-height:30px;
+	text-align:center;
+	opacity:0;
+}
+
+.photo_illu li:hover .up_txt{
+    opacity:1;
+	height:30px;
+	margin-bottom:20px;
+}
+
+.photo_illu li:hover .up_txt p{opacity:1;}
+
+
+
+.photo_illu li:hover .box_border{opacity:1;}
+
+
+
+/* ----------모달윈도우 */
+
+#photo_illu_popup{
+    display:none;
+    position:fixed;
+    top:300%;
+    left:0;
+    width:100%;
+    height:90%;
+    z-index: 1000;
+	overflow-y: scroll;
+}
+
+.photo_illu_back{ /*검정배경*/
+    position: fixed;
+    top:300%;
+    left:0;
+    width:100%;
+    height:100%;
+    background:gray;
+	opacity:0.7;
+    z-index: 900;
+}
+
+.photo_illu_body{ /*모달내용박스영역*/
+    position:relative;
+	top:10%;
+    width:75%;
+    height:100%;
+    margin:0 auto;
+    background: #fff;
+    z-index: 10000;
+	
+	
+}
+
+.photo_illu_pop>li::-webkit-scrollbar{
+	background-color:white;
+}
+.photo_illu_pop>li::-webkit-scrollbar-thumb{
+	background-color:#78C7FF;
+	border-radius:40px;
+	background-clip: padding-box;
+	border: 5px solid transparent;
+}
+.photo_illu_pop>li::-webkit-scrollbar-track{
+	background-color:white;
+}
+.photo_illu_pop>li{
+    position:absolute;
+    width:100%;
+	height:100%;
+    background: #fff;
+    text-align: center;
+    cursor:default;
+    display: none;
+	overflow:auto;
+}
+
+
+
+/*모달 페이지 꾸미기*/
+.photo_illu_pop .tool{ /*툴*/
+    width:39.9%;
+    height:130px;
+    background:#78C7FF;
+    float:left;
+    color:#fff;
+    font-size: 20px;
+    font-weight:900;
+	font-family: 'Jua', sans-serif;
+	padding-top:55px;
+    box-sizing:border-box;
+	border-right:1px solid #fff;
+}
+
+.photo_illu_pop .photo_illu_tit{ /*제목*/
+    float:right;
+    width:60%;
+    height:130px;
+    background:#78C7FF;
+    color:rgba(255,255,255,0.6);
+    font-size:25px;
+    line-height: 130px;
+}
+
+.photo_illu_pop>li>ul>li:nth-child(2)>span{
+    color:#fff;
+    font-size: 40px;
+    margin-left:20px;
+}
+
+.photo_illu_pop>li>ul>li:nth-child(3){ /*전체적인 이미지*/
+    width:1000px;
+    margin:0 auto;
+    padding-top:200px;
+}
+
+.photo_illu_pop>li>ul>li:nth-child(3)>img{
+    width:1000px;
+	height:auto;
+    box-shadow:2px 3px 10px #ccc;
+	margin:0 auto;
+	display:block;
+}
+.photo_illu_pop>li>ul>li:nth-child(3)>video{
+	width:1000px;
+	height:auto;
+    box-shadow:2px 3px 10px #ccc;
+	margin:0 auto;
+	display:block;
+}
+.photo_illu_pop .about{ /*about*/
+    width:1000px;
+    text-align: center;
+    margin:50px 0;
+}
+
+.photo_illu_pop>li>ul>li:last-child{ /*설명텍스트*/
+    color:#555;
+    font-size: 17px;
+    font-weight: 700;
+    font-family:'NotoSans-Light';
+    line-height: 30px;
+    margin-bottom:150px;
+}
+
+
+
+/*모달윈도우 버튼*/
+.photo_illu_btn{
+	position:fixed;
+    top:310%;
+	right:15%;
+    width:86px;
+    height:160px;
+    text-align: center;
+    overflow: hidden;
+    z-index: 10000;
+}
+
+.photo_illu_btn>li{
+	cursor: pointer;
+    overflow: hidden;
+    background: #78C7FF;
+}
+
+.photo_illu_btn>li:hover{background: #b2eaee;}
+
+.photo_illu_btn .photo_illu_close{ /*닫기 버튼*/
+	width:86px;
+    height:75px;
+    border-bottom:1px solid #b2eaee;
+    margin:0 auto;
+}
+
+.photo_illu_btn .photo_illu_close img{margin-top:13px;}
+
+.photo_illu_btn .photo_illu_left{
+	width:43px;
+    height:54px;
+	top:350%;
+	left:15%;
+	position:fixed;
+}
+.photo_illu_btn .photo_illu_right{ /*이전다음 버튼*/
+    width:43px;
+    height:54px;
+	top:350%;
+	right:15%;
+	position:fixed;
+}
+
+.photo_illu_btn .photo_illu_left img,
+.photo_illu_btn .photo_illu_right img{
+	width:35px;
+    margin-top:10px;
+}
+
+.photo_illu_btn li:nth-child(4){ /*페이지*/
+	font-size:12px;
+    font-family: 'Jua', sans-serif;
+    color:#FFF;
+    width:86px;
+    height:50px;
+    padding-top:10px;
+    background: transparent;
+    text-align: center;
+    cursor:default;
+}
+.webinfokeyword{
+	width:100%;
+	height:350px;
+	float: left;
+}
+.webinfokeyword p:nth-child(1){
+	position:relative;
+	top:100px;
+	left:100px;
+	font-size:30px;
+	animation-duration:2s;
+	animation-name:myani;
+	animation-direction:alternate;
+    animation-iteration-count:infinite;
+}
+.webinfokeyword p:nth-child(2){
+	position:relative;
+	top:-10px;
+	left:-10px;
+	font-size:20px;
+	animation-duration:2.7s;
+	animation-name:myani;
+	animation-direction:alternate;
+    animation-iteration-count:infinite;
+}
+.webinfokeyword p:nth-child(3){
+	position:relative;
+	top:80px;
+	left:-50px;
+	font-size:30px;
+	animation-duration:2.5s;
+	animation-name:myani;
+	animation-direction:alternate;
+    animation-iteration-count:infinite;
+}
+.webinfokeyword p:nth-child(4){
+	position:relative;
+	top:-30px;
+	left:-130px;
+	font-size:20px;
+	animation-duration:1.5s;
+	animation-name:myani;
+	animation-direction:alternate;
+    animation-iteration-count:infinite;
+}
+.webinfokeyword p:nth-child(5){
+	position:relative;
+	top:70px;
+	left:-170px;
+	font-size:20px;
+	animation-duration:1.5s;
+	animation-name:myani;
+	animation-direction:alternate;
+    animation-iteration-count:infinite;
+}
+.webinfokeyword p:nth-child(6){
+	position:relative;
+	top:80px;
+	left:50px;
+	font-size:20px;
+	animation-duration:1.5s;
+	animation-name:myani;
+	animation-direction:alternate;
+    animation-iteration-count:infinite;
+}
+@keyframes myani{0%{transform:scale(1);opacity:70%;}100%{transform:scale(1.05);opacity:100%;}}
+
+
+
+
+/*이미지 크기 조정
+
+.photo_illu_pop>li:nth-child(3)>ul>li:nth-child(3),
+.photo_illu_pop>li:nth-child(n+5):nth-child(-n+10)>ul>li:nth-child(3),
+.photo_illu_pop>li:nth-child(16)>ul>li:nth-child(3){width:500px;}
+
+.photo_illu_pop>li:nth-child(4)>ul>li:nth-child(3),
+.photo_illu_pop>li:nth-child(n+11):nth-child(-n+15)>ul>li:nth-child(3),
+.photo_illu_pop>li:nth-child(18)>ul>li:nth-child(3){width:650px;}
+
+.photo_illu_pop>li:nth-child(20)>ul>li:nth-child(3){width:400px;}*/
+
+.slide>img{
+	width:40%;
+	height:auto;
+	float: left;
+	margin-top:100px;
+	margin-left:250px;
+	box-sizing:border-box;
+}
+.uiux1{
+	width:40%;
+	height:700px;
+	float: left;
+	margin-top:3%;
+	margin-left:5%;
+	border:3px solid #78C7FF;
+	box-sizing: border-box;
+}
+.uiux1 h4{
+	font-size:30px;
+	padding:30px 0;
+	background-color: #78C7FF;
+	color:white;
+}
+.uiuxlink{
+	width:100%;
+	height:100%;
+	float: left;
+}
+.uiuxlink a:nth-child(1){
+	width:428px;
+	height:321.6px;
+	position: relative;
+	top:80px;
+	left:80px;
+	z-index:0;
+	overflow:hidden;
+}
+.uiuxlink a:nth-child(2){
+	width:170.4px;
+	height:376px;
+	position: relative;
+	z-index:1;
+	top:-150px;
+	left:500px;
+	overflow: hidden;
+}
+.uiuxlink .ui1{
+	width:100%;
+	height:100%;
+	float: left;
+}
+.uiuxlink .ui2{
+	width:100%;
+	height:auto;
+	float: left;
+}
+.cgv{
+	width:200px;
+	height:200px;
+	background-color:#ec2414;
+	border-radius:1000px;
+	float: left;
+	margin-top:150px;
+	margin-left:100px;
+	transition:all 0.4s ease;
+}
+.cgv p{
+	color:white;
+	font-size:40px;
+	text-align: center;
+	line-height:200px;
+}
+.megabox{
+	width:200px;
+	height:200px;
+	background-color:#4c1d8f;
+	border-radius:1000px;
+	float: left;
+	margin-top:150px;
+	margin-left:150px;
+	transition:all 0.4s ease;
+}
+.megabox p{
+	color:white;
+	font-size:30px;
+	text-align: center;
+	line-height:200px;
+}
+
+.webinfo{
+	width:40%;
+	height:auto;
+	float: left;
+	margin-top:100px;
+	box-sizing:border-box;
+}
+.webinfo h4{
+	width:500px;
+	font-size:50px;
+	float: left;
+	border-bottom:1px solid;
+	padding-bottom:10px;
+}
+.webinfo h5{
+	width:auto;
+	height:20px;
+	float: left;
+	padding:3px;
+	margin-top:5px;
+	margin-left:10px;
+	border-radius:5px;
+	border:1px solid gray;
+}
+.webinfo h5:nth-child(2){
+	background-color: rgba(243, 255, 79, 0.4);
+}
+.webinfo h5:nth-child(3){
+	background-color: rgba(79, 229, 255, 0.4);
+	margin-right:20px;
+}
+.webinfo .react{
+	background-color: rgba(255, 79, 117, 0.4);
+}
+.webinfo .textfinish{
+	background-color: rgba(79, 255, 123, 0.4);
+}
+.webinfodetails{
+	clear:both;
+	width:70%;
+	height:100px;
+	margin-left:5%;
+}
+.webinfodetails li{
+	float: left;
+	margin-left:20px;
+	text-align:left;
+	width:40%;
+	height:30px;
+	margin-top:10px;
+}
+.webinfodetails li:nth-child(4) p{
+	padding-left: 5px;
+}
+.webinfodetails li p{
+	float: left;
+}
+.logoimage{
+	float: left;
+	margin-left:10px;
+}
+.logoimage img{
+	display: block;
+	margin-right:10px;
+}
+.logoimage img:nth-child(3){
+	padding-top:4px;
+}
+.webinfodetails li:nth-child(2) img, .webinfodetails li:nth-child(4) img{
+	float: left;
+	width:auto;
+	width:20px;
+}
+
+.click1{
+	display:none;
+	position:relative;
+	width:100%;
+	height:100%;
+	text-align:center;
+	margin:0 auto;
+	background-color:#78C7FF;
+	opacity:0.7;
+}
+.click2{
+	display:none;
+	position:relative;
+	width:100%;
+	height:100%;
+	text-align:center;
+	margin:0 auto;
+	background-color:#78C7FF;
+	border-radius:20px;
+	opacity:0.7;
+}
+.go1{
+	display:none;
+	position: relative;
+	top:-210px;
+	left:170px;
+	width:100px;
+	height:40px;
+	font-size:40px;
+	color:white;
+	font-family: 'Jua', sans-serif;
+}
+.go2{
+	display:none;
+	position: relative;
+	top:-240px;
+	left:35px;
+	width:100px;
+	height:40px;
+	font-size:40px;
+	color:white;
+	font-family: 'Jua', sans-serif;
+}
+.uiuxlink>a:hover >.click1, .uiuxlink>a:hover >.click2, .uiuxlink>a:hover >.go1, .uiuxlink>a:hover >.go2{
+	display:block;	
+}
+.uiuxlink2{
+	width:100%;
+	height:500px;
+}
+#movie:hover .cgv{
+	transform:translateX(120px);
+	opacity:0.8;
+}
+#movie:hover .megabox{
+	transform:translateX(-120px);
+	opacity:0.8;
+}
+.moredetails{
+	display:block;
+	width:200px;
+	height:50px;
+	background-color: #FEDC00;
+	float: left;
+	margin-left:35%;
+	margin-top:10px;
+	border-radius:5px;
+}
+.moredetails p{
+	line-height:50px;
+}
+.moredetails:hover{
+	background-color: #fcec84;
+}
+.section5 #my{
+	width:100%;
+	height:100%;
+	padding-top:50px;
+	padding-left:250px;
+	box-sizing:border-box;
+}
+
+#myinfo{
+	width:55%;
+	height:400px;
+	float:left;
+}
+#myinfo ul{
+	width:90%;
+	height:80px;
+	float:left;
+	margin-top:20px;
+	margin-left:10%;
+	padding-left:2%;
+	box-sizing:border-box;
+}
+#myinfo ul li{
+	height:40px;
+	float: left;
+	text-align:left;
+	line-height:40px;
+	margin-right:10px;
+	margin-top:30px;
+	font-family: 'Gowun Batang', serif;
+}
+#myinfo ul li img{
+	width:20px;
+	height:20px;
+	float: left;
+	margin-top: 10px;
+	margin-right:5px;
+}
+#myinfo ul li p{
+	float: left;
+	font-family: 'Gowun Batang', serif;
+}
+#myinfo ul li:nth-child(1){
+	font-size:50px;
+	margin-left:50px;
+	font-family: 'Jua', sans-serif;
+}
+#myinfo ul li:nth-child(3){
+	font-size:20px;
+}
+.infodetails{
+	width:90%;
+	height:80px;
+	float:left;
+	margin-top:30px;
+	margin-left:10%;
+}
+.infodetails h4{
+	margin-bottom:10px;
+	font-family: 'Gowun Batang', serif;
+}
+.infodetails p{
+	font-family: 'Gowun Batang', serif;
+}
+#myphoto{
+	width:25%;
+	height:400px;
+	float:left;
+	margin-left:30px;
+	box-sizing: border-box;
+}
+#myphoto img{
+	width:100%;
+	height:auto;
+}
+.myskills{
+	margin-top:100px;
+	margin-left:50px;
+	clear: both;
+	float: left;
+	width:80%;
+	height:400px;
+	box-sizing: border-box;
+}
+.myskill1{
+	margin-top:10px;
+	width:100%;
+	height:100px;
+	float: left;
+}
+.myskill{
+	float: left;
+	width:20%;
+	height:100px;
+	margin-right:5%;
+}
+.myskill h5{
+	width:80%;
+	text-align:left;
+	font-size:20px;
+	font-family: 'Gowun Batang', serif;
+	float: left;
+	margin-bottom:20px;
+}
+.myskillbar{
+	clear: both;
+	float: left;
+	width: 0;
+	height: 15px;
+	/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#f2ec37+0,57c7ed+100 */
+	background: rgb(242,236,55); /* Old browsers */
+	background: -moz-linear-gradient(left,  rgba(242,236,55,1) 0%, rgba(87,199,237,1) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(left,  rgba(242,236,55,1) 0%,rgba(87,199,237,1) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to right,  rgba(242,236,55,1) 0%,rgba(87,199,237,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2ec37', endColorstr='#57c7ed',GradientType=1 ); /* IE6-9 */;
+}
+
+.myskill p{
+	float: right;
+	width:20%;
+	height:15px;
+	font-size:15px;
+	line-height:15px;
+}
+.ablue{
+	background-color: blue;
+	color: white;
+	width:60px;
+	margin:0 auto;
+}
+.cblue{
+	background-color: blue;
+	color:white;
+	width:60px;
+	margin:0 auto;
+}
+.mint{
+	background-color: #49ff95;
+	color: white;
+	width:60px;
+	margin:0 auto;
+}
+.yellow{
+	background-color: yellow;
+	width:80px;
+	margin:0 auto;
+}
+.purple{
+	background-color:#4c1d8f;
+	color:white;
+	width:80px;
+	margin:0 auto;
+}
+.black{
+	background-color:black;
+	color:white;
+	width:65px;
+	margin:0 auto;
+}
+.deepred{
+	background-color:#a4041c;
+	color:white;
+	width:100px;
+	margin:0 auto;
+}
+.deepgray{
+	background-color:#222222;
+	color:white;
+	width:110px;
+	margin:0 auto;
+}
+.red{
+	background-color: #ee3442;
+	color: white;
+	width:50px;
+	margin:0 auto;
+}
+#thanks{
+	float: left;
+	width:50%;
+	height:100%;
+}
+#con{
+	width:45%;
+	height:100%;
+	float: left;
+	margin-right:5%;
+	box-sizing: border-box;
+}
+.con1{
+	width:100%;
+	height:30%;
+	float: left;
+	margin-top:20%;
+}
+.con1 p:nth-child(1){
+	font-size:100px;
+	width:100%;
+	float: left;
+	text-shadow:3px 3px #78C7FF;
+}
+.con1 p:nth-child(2){
+	font-size:20px;
+	width:90%;
+	float: left;
+	text-align: right;
+}
+.con2{
+	width:100%;
+	height:30%;
+	float: left;
+	margin-top:20%;
+}
+.con2 p:nth-child(1){
+	font-size:20px;
+	float: left;
+	margin-left:20%;
+}
+.con2 p:nth-child(2){
+	font-size:50px;
+	float: left;
+	text-align: right;
+	margin-left:40%;
+	border-bottom:5px solid #78C7FF;
+
+}
+@media screen and (max-width:1600px) {
+h1{
+	top:30%;
+	left:22.5%;
+}
+#mainscroll{
+	top:80%;
+	left:40%;
+}
+
+.slider {
+	width:95%;
+    height:490px;
+    margin-right:5%;
+}
+.slide_buttons a{
+	padding-top:15px;
+	font-size:13px;
+	box-sizing:border-box;
+}
+.slide>img{
+	width:30%;
+	height:auto;
+}
+.webinfo{
+	width:40%;
+	height:auto;
+	float: left;
+	box-sizing:border-box;
+}
+.webinfokeyword{
+	display: none;
+}
+.previous_btn {
+	left: 50px;
+}
+.next_btn {
+  right: 125px;
+}
+.webinfo h5:nth-child(3){
+	margin-right:0;
+}
+.webinfo h4{
+	clear:both;
+}
+.uiux1{
+	height:450px;
+}
+.uiux1 h4{
+	font-size:21px;
+}
+.uiuxlink a:nth-child(1){
+	width:256.8px;
+	height:192.96px;
+	position: relative;
+	top:30px;
+	left:30px;
+	z-index:0;
+	overflow:hidden;
+}
+.uiuxlink a:nth-child(2){
+	width:102.24px;
+	height:225.6px;
+	position: relative;
+	z-index:1;
+	top:-110px;
+	left:350px;
+	overflow: hidden;
+}
+.go1{
+	top:-150px;
+	left:80px;
+}
+.go2{
+	top:-160px;
+	left:0;
+}
+.cgv{
+	margin-top:70px;
+	margin-left:50px;
+}
+.megabox{
+	margin-top:70px;
+	margin-left:50px;
+}
+#movie:hover .cgv{
+	transform:translateX(50px);
+	opacity:0.8;
+}
+#movie:hover .megabox{
+	transform:translateX(-50px);
+	opacity:0.8;
+}
+.photo_illu li {
+    width: 135px;
+    height:135px;
+}
+.photo_illu {
+    width: 85%;
+    margin: 5% auto;
+}
+.photo_illu li img{
+	width:100%;
+	height:135px;
+
+}
+.up_txt p{
+	font-size:13px;
+}
+.section5 #my{
+	padding:0;
+	padding-left:10%;
+}
+#myphoto{
+	clear:both;
+	width:15%;
+	height:200px;
+}
+#myinfo{
+	width:75%;
+	height:300px;
+}
+.section5 .title{
+	margin:0 auto;
+}
+#myinfo ul {
+    margin:0;
+    padding-left:0;
+    box-sizing: border-box;
+}
+.infodetails {
+    width: 90%;
+    height: 80px;
+    float: left;
+    margin-top:10px;
+    margin-left:0;
+}
+#myinfo div:nth-child(3), #myinfo div:nth-child(4){
+	width:45%;
+	margin-top:30px;
+}
+.myskills {
+    margin-top: 0;
+    margin-left: 50px;
+    clear: both;
+    float: left;
+    width: 80%;
+    height: 300px;
+    box-sizing: border-box;
+}
+}
+	</style>	
+</head>
+<body>
+	
+	<div id="main" class="scroll-container">
+		<section class="section1" id="HOME">
+			<div>
+				
+				<div id="mainvisual">
+					<h1>YEON-JU Jin</h1>
+				</div>
+				<div id="mainscroll">
+					<p>Are you curious about me?<p>
+					<div class="arrowCta"></div>
+				</div>	
+				<div class="js-container container"></div>		
+			</div>
+		</section>
+		<section class="section2" id="WEB">
+			<div>
+				<div class="title">
+					<p>
+						<span style="color:#78C7FF;text-shadow: 4px 4px 0 #FEDC00;">Portfolio</span>
+						<span style="color:#FEDC00;;text-shadow: 4px 4px 0 #78C7FF">WEB</span>
+					</p>
+				</div>
+				<div class="slider">
+					<div class="slide_viewer">
+					  <div class="slide_group">
+						<div class="slide" id="s1">
+							<img src="이미지작업/web/asus5.png" alt="ASUS">
+							<div class="webinfo">
+								<h4>ASUS</h4>
+								<h5>개인작업</h5>
+								<h5>홈페이지 리뉴얼</h5>
+								<h5 class="react">반응형</h5>
+								<h5 class="textfinish">웹접근성 테스트 완료</h5>
+								<ul class="webinfodetails">
+									<li>Period | 4days</li>
+									<li><p>WEB | </p>
+										<div class="logoimage">
+											<img src="이미지작업/logo/logo (8).png" alt="html5">
+											<img src="이미지작업/logo/logo (6).png" alt="css3">
+											<img src="이미지작업/logo/logo (2).png" alt="photoshop">
+										</div>
+									</li>
+									<li>Category | Digital</li>
+								</ul>
+									<a href="web/ASUS.html" target="_blank" class="moredetails"><p>MORE DETAILS</p></a>
+								<div class="webinfokeyword">
+									<p>#고급스러운</p>
+									<p>#전문성</p>
+									<p>#하이테크</p>
+									<p>#세련된</p>
+									<p class="black">#Black</p>
+									<p class="ablue">#Blue</p>
+								</div>
+							
+							</div>
+						</div>
+						<div class="slide" id="s2">
+							<img src="이미지작업/web/conranshop1.png" alt="THE CONRAN SHOP">
+							<div class="webinfo">
+								<h4>THE CONRAN SHOP</h4> 
+								<h5>개인작업</h5>
+								<h5>홈페이지 리뉴얼</h5>
+								<h5 class="textfinish">웹접근성 테스트 완료</h5>
+								<ul class="webinfodetails">
+									<li>Period | 3days</li>
+									<li><p>WEB | </p>
+										<div class="logoimage">
+											<img src="이미지작업/logo/logo (8).png" alt="html5">
+											<img src="이미지작업/logo/logo (6).png" alt="css3">
+											<img src="이미지작업/logo/logo (2).png" alt="photoshop">
+										</div>
+									</li>
+									<li>Category | Furniture</li>
+									<li><p>APP | </p>
+										<div class="logoimage">
+											<img src="이미지작업/logo/logo (1).png" alt="figma">
+										</div>
+									</li>
+								</ul>
+									<a href="web/THECONRANSHOP.html" target="_blank" class="moredetails"><p>MORE DETAILS</p></a>
+								<div class="webinfokeyword">
+									<p>#감각적인</p>
+									<p>#컬러풀한</p>
+									<p>#Kitch</p>
+									<p>#트렌디한</p>
+									<p class="cblue">#Blue</p>
+									<p class="yellow">#Yellow</p>
+								</div>
+							</div>
+						</div>
+						<div class="slide" id="s3">
+							<img src="이미지작업/web/eternal1.png" alt="ETERNAL RETURN">
+							<div class="webinfo">
+								<h4>ETERNAL RETURN</h4>
+								<h5>개인작업</h5>
+								<h5>홈페이지 리뉴얼</h5>
+								<h5 class="react">반응형</h5>
+								<h5 class="textfinish">웹접근성 테스트 완료</h5>
+								<ul class="webinfodetails">
+									<li>Period | 2days</li>
+									<li><p>WEB | </p>
+										<div class="logoimage">
+											<img src="이미지작업/logo/logo (8).png" alt="html5">
+											<img src="이미지작업/logo/logo (6).png" alt="css3">
+											<img src="이미지작업/logo/logo (2).png" alt="photoshop">
+										</div>
+									</li>
+									<li>Category | Game</li>
+								</ul>
+								<a href="web/ETERNAL RETURN.html" target="_blank" class="moredetails"><p>MORE DETAILS</p></a>
+								<div class="webinfokeyword">
+									<p>#역동적인</p>
+									<p>#능동적인</p>
+									<p>#센세이셔널한</p>
+									<p>#비주얼</p>
+									<p class="black">#Black</p>
+									<p>#트렌디한</p>
+								</div>
+							
+							</div>
+						</div>
+						<div class="slide" id="s4">
+							<img src="이미지작업/web/spo.png" alt="Spotify">
+							<div class="webinfo">
+								<h4>Spotify</h4>
+								<h5>개인작업</h5>
+								<h5>홈페이지 리뉴얼</h5>
+								<h5 class="react">적응형</h5>
+								<h5 class="textfinish">웹접근성 테스트 완료</h5>
+								<ul class="webinfodetails">
+									<li>Period | 3days</li>
+									<li><p>WEB | </p>
+										<div class="logoimage">
+											<img src="이미지작업/logo/logo (8).png" alt="html5">
+											<img src="이미지작업/logo/logo (6).png" alt="css3">
+											<img src="이미지작업/logo/logo (2).png" alt="photoshop">
+										</div>
+									</li>
+									<li>Category | Music</li>
+								</ul>
+								<a href="web/Spotify.html" target="_blank" class="moredetails"><p>MORE DETAILS</p></a>
+								<div class="webinfokeyword">
+									<p>#트렌드를 주도하는</p>
+									<p>#특색있는</p>
+									<p>#Curture</p>
+									<p>#컬러풀한</p>
+									<p class="mint">#Mint</p>
+									<p>흥미를 일으키는</p>
+								</div>
+							
+							</div>
+						</div>
+						<div class="slide" id="s5">
+							<img src="이미지작업/web/mini.png" alt="MINI">
+							<div class="webinfo">
+								<h4>MINI</h4>
+								<h5>개인작업</h5>
+								<h5>홈페이지 리뉴얼</h5>
+								<h5 class="textfinish">웹접근성 테스트 완료</h5>
+								<ul class="webinfodetails">
+									<li>Period | 1days</li>
+									<li><p>WEB | </p>
+										<div class="logoimage">
+											<img src="이미지작업/logo/logo (8).png" alt="html5">
+											<img src="이미지작업/logo/logo (6).png" alt="css3">
+											<img src="이미지작업/logo/logo (2).png" alt="photoshop">
+										</div>
+									</li>
+									<li>Category | Vehicle</li>
+								</ul>
+								<a href="web/MINI.html" target="_blank" class="moredetails"><p>MORE DETAILS</p></a>
+								<div class="webinfokeyword">
+									<p>#신뢰</p>
+									<p class="black">#Black</p>
+									<p>#깔끔한</p>
+									<p>#세련된</p>
+									<p>#트렌드한</p>
+									<p>#고급스러운</p>
+								</div>
+							
+							</div>
+						</div>
+						<div class="slide" id="s6">
+							<img src="이미지작업/web/wm1.png" alt="WM Entertainment">
+							<div class="webinfo">
+								<h4>WM Entertainment</h4>
+								<h5>개인작업</h5>
+								<h5>홈페이지 리뉴얼</h5>
+								<h5 class="textfinish">웹접근성 테스트 완료</h5>
+								<ul class="webinfodetails">
+									<li>Period | 9days</li>
+									<li><p>WEB | </p>
+										<div class="logoimage">
+											<img src="이미지작업/logo/logo (8).png" alt="html5">
+											<img src="이미지작업/logo/logo (6).png" alt="css3">
+											<img src="이미지작업/logo/logo (2).png" alt="photoshop">
+										</div>
+									</li>
+									<li>Category | Entertainment</li>
+									<li><p>APP | </p>
+										<div class="logoimage">
+											<img src="이미지작업/logo/logo (1).png" alt="figma">
+										</div>
+									</li>
+								</ul>
+								<a href="web/WMent.html" target="_blank" class="moredetails"><p>MORE DETAILS</p></a>
+								<div class="webinfokeyword">
+									<p>#시각적</p>
+									<p>#컬러풀</p>
+									<p>#화려한</p>
+									<p>#세련된</p>
+									<p>#트렌디한</p>
+									<p class="purple">#Purple</p>
+								</div>
+						
+							</div>
+						</div>
+						<div class="slide" id="s7">
+							<img src="이미지작업/web/aesop.png" alt="Aesop">
+							<div class="webinfo">
+								<h4>Aesop</h4>
+								<h5>개인작업</h5>
+								<h5>홈페이지 리뉴얼</h5>
+								<h5 class="textfinish">웹접근성 테스트 완료</h5>
+								<ul class="webinfodetails">
+									<li>Period | 5days</li>
+									<li><p>WEB | </p>
+										<div class="logoimage">
+											<img src="이미지작업/logo/logo (8).png" alt="html5">
+											<img src="이미지작업/logo/logo (6).png" alt="css3">
+											<img src="이미지작업/logo/logo (2).png" alt="photoshop">
+										</div>
+									</li>
+									<li>Category | Beauty</li>
+								</ul>
+								<a href="web/Aesop.html" target="_blank" class="moredetails"><p>MORE DETAILS</p></a>
+								<div class="webinfokeyword">
+									<p>#고급스러운</p>
+									<p>#브랜드정체성</p>
+									<p>#자연주의</p>
+									<p>#간결한</p>
+									<p>#시그니처디자인</p>
+									<p class="deepgray">#DeepGray</p>
+								</div>
+							
+							</div>
+						</div>
+						<div class="slide" id="s8">
+							<img src="이미지작업/web/tw.png" alt="Twosome Place">
+							<div class="webinfo">
+								<h4>Twosome Place</h4>
+								<h5>개인작업</h5>
+								<h5>홈페이지 리뉴얼</h5>
+								<h5 class="textfinish">웹접근성 테스트 완료</h5>
+								<ul class="webinfodetails">
+									<li>Period | 3days</li>
+									<li><p>WEB | </p>
+										<div class="logoimage">
+											<img src="이미지작업/logo/logo (8).png" alt="html5">
+											<img src="이미지작업/logo/logo (6).png" alt="css3">
+											<img src="이미지작업/logo/logo (2).png" alt="photoshop">
+										</div>
+									</li>
+									<li>Category | Cafe</li>
+								</ul>
+								<a href="web/twosomeplace.html" target="_blank" class="moredetails"><p>MORE DETAILS</p></a>
+								<div class="webinfokeyword">
+									<p>#트렌디한</p>
+									<p>#브랜드정체성</p>
+									<p>#눈길을 끄는</p>
+									<p>#고급스러운</p>
+									<p>#세련된</p>
+									<p class="deepred">#DeepRed</p>
+								</div>
+							
+							</div>
+						</div>
+						<div class="slide" id="s9">
+							<img src="이미지작업/web/wg.png" alt="Wiggle-Wiggle">
+							<div class="webinfo">
+								<h4>Wiggle-Wiggle</h4>
+								<h5>개인작업</h5>
+								<h5>홈페이지 리뉴얼</h5>
+								<h5 class="textfinish">웹접근성 테스트 완료</h5>
+								<ul class="webinfodetails">
+									<li>Period | 2days</li>
+									<li><p>WEB | </p>
+										<div class="logoimage">
+											<img src="이미지작업/logo/logo (8).png" alt="html5">
+											<img src="이미지작업/logo/logo (6).png" alt="css3">
+											<img src="이미지작업/logo/logo (2).png" alt="photoshop">
+										</div>
+									</li>
+									<li>Category | Life Style</li>
+								</ul>
+								<a href="web/wigglewiggle.html" target="_blank" class="moredetails"><p>MORE DETAILS</p></a>
+								<div class="webinfokeyword">
+									<p>#귀여운</p>
+									<p>#독특한</p>
+									<p>#브랜드 정체성</p>
+									<p>#재밌는</p>
+									<p>#컬러풀한</p>
+									<p class="red">#Red</p>
+								</div>
+							
+							</div>
+						</div>
+						<div class="slide" id="s10">
+							<img src="이미지작업/web/kakao.png" alt="KaKao">
+							<div class="webinfo">
+								<h4>Kakao</h4>
+								<h5>개인작업</h5>
+								<h5>홈페이지 재현</h5>
+								<ul class="webinfodetails">
+									<li>Period | 4days</li>
+									<li><p>WEB | </p>
+										<div class="logoimage">
+											<img src="이미지작업/logo/logo (8).png" alt="html5">
+											<img src="이미지작업/logo/logo (6).png" alt="css3">
+											<img src="이미지작업/logo/logo (2).png" alt="photoshop">
+										</div>
+									</li>
+									<li>Category | Company</li>
+								</ul>
+								<a href="web/pages/kakao_진연주/kakao_진연주.html" target="_blank" class="moredetails"><p>Go Web</p></a>
+								<div class="webinfokeyword">
+							
+								</div>
+							
+							</div>
+						</div>
+					  </div>
+					</div>
+				  </div><!-- End // .slider -->
+				  
+				  <div class="slide_buttons">
+				
+				  </div>
+				  
+				  <div class="directional_nav">
+					<div class="previous_btn" title="Previous">
+					  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="65px" height="65px" viewBox="-11 -11.5 65 66">
+						<g>
+						  <g>
+							<path fill="#474544" d="M-10.5,22.118C-10.5,4.132,4.133-10.5,22.118-10.5S54.736,4.132,54.736,22.118
+							  c0,17.985-14.633,32.618-32.618,32.618S-10.5,40.103-10.5,22.118z M-8.288,22.118c0,16.766,13.639,30.406,30.406,30.406 c16.765,0,30.405-13.641,30.405-30.406c0-16.766-13.641-30.406-30.405-30.406C5.35-8.288-8.288,5.352-8.288,22.118z"/>
+							<path fill="#474544" d="M25.43,33.243L14.628,22.429c-0.433-0.432-0.433-1.132,0-1.564L25.43,10.051c0.432-0.432,1.132-0.432,1.563,0	c0.431,0.431,0.431,1.132,0,1.564L16.972,21.647l10.021,10.035c0.432,0.433,0.432,1.134,0,1.564	c-0.215,0.218-0.498,0.323-0.78,0.323C25.929,33.569,25.646,33.464,25.43,33.243z"/>
+						  </g>
+						</g>
+					  </svg>
+					</div>
+					<div class="next_btn" title="Next">
+					  <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="65px" height="65px" viewBox="-11 -11.5 65 66">
+						<g>
+						  <g>
+							<path fill="#474544" d="M22.118,54.736C4.132,54.736-10.5,40.103-10.5,22.118C-10.5,4.132,4.132-10.5,22.118-10.5	c17.985,0,32.618,14.632,32.618,32.618C54.736,40.103,40.103,54.736,22.118,54.736z M22.118-8.288	c-16.765,0-30.406,13.64-30.406,30.406c0,16.766,13.641,30.406,30.406,30.406c16.768,0,30.406-13.641,30.406-30.406 C52.524,5.352,38.885-8.288,22.118-8.288z"/>
+							<path fill="#474544" d="M18.022,33.569c 0.282,0-0.566-0.105-0.781-0.323c-0.432-0.431-0.432-1.132,0-1.564l10.022-10.035 			L17.241,11.615c 0.431-0.432-0.431-1.133,0-1.564c0.432-0.432,1.132-0.432,1.564,0l10.803,10.814c0.433,0.432,0.433,1.132,0,1.564 L18.805,33.243C18.59,33.464,18.306,33.569,18.022,33.569z"/>
+						  </g>
+						</g>
+					  </svg>
+					</div>
+				  </div><!-- End // .directional_nav -->
+				  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+				 		
+			</div>
+		</section>
+		<section class="section3" id="UIUX">
+			<div>
+				<div class="title">
+					<p>
+						<span style="color:#78C7FF;text-shadow: 4px 4px 0 #FEDC00;">Portfolio</span>
+						<span style="color:#FEDC00;;text-shadow: 4px 4px 0 #78C7FF">UI & UX</span>
+					</p>
+				</div>
+				<div class="uiux1">
+					<h4>사용성을 분석한 모바일 UI/UX 앱디자인</h4>
+					<div class="uiuxlink">
+						<a href="UIUX/PPT.pdf" target="_blank" class="ppt">
+							<img src="UIUX/Screenshot 2021-04-13 at 11.45.45.jpg" alt="와이어프레임PPT" class="ui1">
+							<div class="click1"></div>
+							<p class="go1">GO<br>PPT</p>
+							
+						</a>
+						
+						<a href="https://xd.adobe.com/view/8e737cf3-60e4-4b7f-9a9b-7877577f94fa-db20/" target="_blank" class="xd">
+							<img src="이미지작업/uiux/와이어프레임.png" alt="와이어프레임XD" class="ui2">
+							<div class="click2"></div>
+							<p class="go2">GO<br>XD</p>
+							
+						</a>
+						
+					</div>
+				</div>
+				<div class="uiux1">
+					<h4>사용자의 요구분석에 따른 대표적인 영화관 앱의 UI/UX</h4>
+					<a href="https://blog.naver.com/oilzt/222280824795" target="_blank" id="movie">
+						<div class="uiuxlink2">
+							<div class="cgv"><p>CGV</p></div>
+							<div class="megabox"><p>MEGA BOX</p></div>
+						</div>
+					</a>
+				</div>			
+			</div>
+		</section>
+		<section class="section4" id="DESIGN">
+			<div>
+				<div class="title">
+					<p>
+						<span style="color:#78C7FF;text-shadow: 4px 4px 0 #FEDC00;margin-top:0;">Portfolio</span>
+						<span style="color:#FEDC00;;text-shadow: 4px 4px 0 #78C7FF;margin-top:0;">DESIGN</span>
+					</p>
+				</div>
+				<div id="GRAPHIC">
+					<div class="GRAPHIC_in">
+						<ul class="photo_illu">
+							<li><a href="#">
+								<img src="DESIGN/1-1.jpg"><span class="box_border indent">테두리</span>
+								<div class="up_txt"><p>SNS광고-화장품</p></div>
+							</a></li>
+							<li><a href="#">
+								<img src="DESIGN/2-1.jpg"><span class="box_border indent">테두리</span>
+								<div class="up_txt"><p>인포그래픽-영화홍보물</p></div>
+							</a></li>
+							<li><a href="#">
+								<img src="DESIGN/3-1.jpg"><span class="box_border indent">테두리</span>
+								<div class="up_txt"><p>인포그래픽-디즈니랜드 지도</p></div>
+							</a></li>
+							<li><a href="#">
+								<img src="DESIGN/4-1.jpg"><span class="box_border indent">테두리</span>
+								<div class="up_txt"><p>상세페이지-IKEA</p></div>
+							</a></li>
+							<li><a href="#">
+								<img src="DESIGN/7-1.jpg"><span class="box_border indent">테두리</span>
+								<div class="up_txt"><p>합성-컨셉이미지</p></div>
+							</a></li>
+							<li><a href="#">
+								<img src="DESIGN/6.gif"><span class="box_border indent">테두리</span>
+								<div class="up_txt"><p>SNS광고-LINE FREINDS</p></div>
+							</a></li>
+							<li><a href="#">
+								<img src="DESIGN/5.gif"><span class="box_border indent">테두리</span>
+								<div class="up_txt"><p>SNS광고-Wiggle Wiggle</p></div>
+							</a></li>
+							<li><a href="#">
+								<img src="DESIGN/8-1.jpg"><span class="box_border indent">테두리</span>
+								<div class="up_txt"><p>핸드폰케이스-일러스트</p></div>
+							</a></li>
+							<li><a href="#">
+								<img src="DESIGN/9-1.jpg"><span class="box_border indent">테두리</span>
+								<div class="up_txt"><p>SNS광고-NIKE</p></div>
+							</a></li>
+							<li><a href="#">
+								<img src="DESIGN/10-1.jpg"><span class="box_border indent">테두리</span>
+								<div class="up_txt"><p>인물보정</p></div>
+							</a></li>
+							<li><a href="#">
+								<img src="DESIGN/11-1.jpg"><span class="box_border indent">테두리</span>
+								<div class="up_txt"><p>애프터이펙트를 활용한 영상</p></div>
+							</a></li>
+							<li><a href="#">
+								<img src="DESIGN/12-1.jpg"><span class="box_border indent">테두리</span>
+								<div class="up_txt"><p>프리미어를 활용한 영상</p></div>
+							</a></li>
+						
+						</ul> 
+						
+						<div id="photo_illu_popup"> 
+							<div class="photo_illu_body clear">
+								<ul class="photo_illu_pop">
+									
+									<li>
+										<ul>
+											<li class="tool">PHOTOSHOP</li>
+											<li class="photo_illu_tit"><span>SNS광고-화장품</span></li>
+											<li><img src="DESIGN/1.jpg"></li>
+										</ul>
+									</li>
+									<li>
+										<ul>
+											<li class="tool">PHOTOSHOP / ILLUSTRATOR</li>
+											<li class="photo_illu_tit"><span>인포그래픽-영화홍보물</span></li>
+											<li><img src="DESIGN/2.jpg"></li>
+										</ul>
+									</li>
+									<li>
+										<ul>
+											<li class="tool">PHOTOSHOP / ILLUSTRATOR</li>
+											<li class="photo_illu_tit"><span>인포그래픽-디즈니랜드 지도</span></li>
+											<li><img src="DESIGN/3.jpg"></li>
+										</ul>
+									</li>
+									<li>
+										<ul>
+											<li class="tool">PHOTOSHOP / ILLUSTRATOR</li>
+											<li class="photo_illu_tit"><span>상세페이지-IKEA</span></li>
+											<li><img src="DESIGN/4.jpg"></li>
+										</ul>
+									</li>
+									<li>
+										<ul>
+											<li class="tool">PHOTOSHOP</li>
+											<li class="photo_illu_tit"><span>합성-컨셉이미지</span></li>
+											<li><img src="DESIGN/7.jpg"></li>
+										</ul>
+									</li>
+									<li>
+										<ul>
+											<li class="tool">PHOTOSHOP</li>
+											<li class="photo_illu_tit"><span>SNS광고-LINE</span></li>
+											<li><img src="DESIGN/6.gif"></li>
+										</ul>
+									</li>
+									<li>
+										<ul>
+											<li class="tool">PHOTOSHOP</li>
+											<li class="photo_illu_tit"><span>SNS광고-Wiggle Wiggle</span></li>
+											<li><img src="DESIGN/5.gif"></li>
+										</ul>
+									</li>
+									<li>
+										<ul>
+											<li class="tool">PHOTOSHOP / ILLUSTRATOR</li>
+											<li class="photo_illu_tit"><span>핸드폰케이스-일러스트</span></li>
+											<li><img src="DESIGN/8.jpg"></li>
+										</ul>
+									</li>
+									<li>
+										<ul>
+											<li class="tool">PHOTOSHOP</li>
+											<li class="photo_illu_tit"><span>SNS광고-NIKE</span></li>
+											<li><img src="DESIGN/9.jpg"></li>
+										</ul>
+									</li>
+									<li>
+										<ul>
+											<li class="tool">PHOTOSHOP</li>
+											<li class="photo_illu_tit"><span>인물보정</span></li>
+											<li><img src="DESIGN/10.jpg"></li>
+										</ul>
+									</li>
+									<li>
+										<ul>
+											<li class="tool">PHOTOSHOP / AFTEREFFECTS</li>
+											<li class="photo_illu_tit"><span>애프터이펙트를 활용한 영상</span></li>
+											<li>
+												<iframe width="854" height="480" src="https://www.youtube.com/embed/MMsLTj_m_Ug" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+													<source src="DESIGN/11.mp4"><!--safari, chrome, window7/8-->
+													<source src="DESIGN/11.mp4"><!--firefox, opera-->
+													<source src="DESIGN/11.mp4"><!--chrome-->
+												</video>
+											</li>
+										</ul>
+									</li>
+									<li>
+										<ul>
+											<li class="tool">PHOTOSHOP / PRIMIERE</li>
+											<li class="photo_illu_tit"><span>프리미어를 활용한 영상</span></li>
+											<li>
+												<iframe width="854" height="480" src="https://www.youtube.com/embed/80ghvM3a28Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+													<source src="DESIGN/12.mp4"><!--safari, chrome, window7/8-->
+													<source src="DESIGN/12.mp4"><!--firefox, opera-->
+													<source src="DESIGN/12.mp4"><!--chrome-->
+												</video>
+											</li>
+										</ul>
+									</li>
+							
+								</ul> 
+								
+								<!-- 모달윈도우 버튼 -->
+								<ul class="photo_illu_btn">
+									<li class="photo_illu_close"><img src="image/btn_close.png" alt="닫기버튼"></li>
+									<li class="photo_illu_left"><img src="image/btn_left.png" alt="이전버튼"></li>
+									<li class="photo_illu_right"><img src="image/btn_right.png" alt="다음버튼"></li>
+									<li class="photo_illu_page"><span>1</span> / <span>12</span></li>
+								</ul>
+							</div>
+							<div class="photo_illu_back indent"></div>
+						</div>
+					</div>
+				</div>
+							
+			</div>
+		</section>
+		<section class="section5" id="PROFILE">
+			<div>
+				<div class="title">
+					<p>
+						<span style="color:#78C7FF;text-shadow: 4px 4px 0 #FEDC00;">my</span>
+						<span style="color:#FEDC00;;text-shadow: 4px 4px 0 #78C7FF">PROFILE</span>
+					</p>
+				</div>
+				<div id="my">
+				<div id="myphoto">
+					<img src="이미지작업/profile1.png" alt="myphoto">
+				</div>
+				<div id="myinfo">
+						<ul>
+							<li>진연주</li>
+							<li> | </li>
+							<li>1994 08 23</li>
+							<li><img src="images/smartphone.png" alt="phone"><p>010.4825.7703</p></li>
+							<li><img src="images/envelope.png" alt="email"><p>oilzt@naver.com</p></li>
+							<li><img src="images/house-outline.png" alt="home"><p>서울시 강서구</p></li>
+						</ul>
+					
+					<div class="infodetails">
+						<h4>학력</h4>
+						<p>2021.03.05~2021.07.30 영상을 활용한 UI/UX 웹디자인&웹퍼블리셔 수료</p>
+						<p>2020.2 한성대학교 의류패션산업전공 졸업</p>
+					</div>	
+					<div class="infodetails">
+						<h4>자격증</h4>
+						<p>2021.06 컬러리스트 기사</p>
+						<p>2018.07 MOS Master2010</p>
+					</div>	
+					<div class="infodetails">
+						<h4>대외활동</h4>
+						<p>2017.07.31~2017.08.03 소외지역 교육봉사</p>
+						<p>2016.08.08~2016.08.03 소외지역 교육봉사</p>
+					</div>
+				</div>	
+				
+				<div class="myskills">
+					<div class="myskill1">
+						<div class="myskill">
+							<h5>HTML5</h5>
+							<div class="myskillbar bar100"></div>
+							<p>95%</p>
+						</div>
+						<div class="myskill">
+							<h5>CSS3</h5>
+							<div class="myskillbar bar100"></div>
+							<p>95%</p>
+						</div>
+						<div class="myskill">
+							<h5>javascript</h5>
+							<div class="myskillbar bar50"></div>
+							<p>50%</p>
+						</div>
+						<div class="myskill">
+							<h5>XD / Figma</h5>
+							<div class="myskillbar bar100"></div>
+							<p>95%</p>
+						</div>
+					</div>
+					<div class="myskill1">
+						<div class="myskill">
+							<h5>Photoshop</h5>
+							<div class="myskillbar bar80"></div>
+							<p>80%</p>
+						</div>
+						<div class="myskill">
+							<h5>Illustrator</h5>
+							<div class="myskillbar bar80"></div>
+							<p>80%</p>
+						</div>
+						<div class="myskill">
+							<h5>Premier</h5>
+							<div class="myskillbar bar80"></div>
+							<p>80%</p>
+						</div>
+						<div class="myskill">
+							<h5>After Effect</h5>
+							<div class="myskillbar bar50"></div>
+							<p>50%</p>
+						</div>
+					</div>
+				</div>
+			</div>			
+			</div>
+		</section>
+		<section class="section6" id="CONTACT">
+			<div>
+				<img src="images/우유니1.jpg" alt="우유니사막" id="thanks" title="꼭 가보고 싶은 우유니사막">
+				<div id="con">
+					<div class="con1">
+						<p>THANK YOU</p>
+						<p>방문해주셔서 감사합니다.</p>
+					</div>	
+					<div class="con2">
+						<p>궁금한점은 언제든 문의주세요!</p>
+						<p>oilzt@naver.com</p>
+					</div>	
+				</div>	
+			</div>
+		</section>
+	</div>
+	<script src="js/full-page-scroll.js"></script>
+	<script type="text/javascript">
+		new fullScroll({
+			displayDots: true,
+			dotsPosition: 'left',
+			animateTime: 2,
+			animateFunction: 'ease'
+		});
+	</script>
+	<script src="js/slider2.js"></script>
+	 <script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+	 <script type="text/javascript" src="js/main.js"></script>
+	 <script  src="js/script.js"></script>
+	 <script type="text/javascript" src="js/name.js"></script>
+</body>
+</html>
