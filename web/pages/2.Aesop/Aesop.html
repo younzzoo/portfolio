@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <title>Aesop</title>
+    <style>
+        *{margin:0;padding:0;}
+        ul li{list-style: none;}
+        img{border: 0;}
+        a{text-decoration:none;color:black;}
+        header{width:100%;height:470px;}
+        #pink{position:absolute;width:100%;height:470px;background-color:#ecd0c5;z-index:-10;}
+        #free{width:100%;height:50px;background-color:#333;}
+        #free a{display:block;width:280px;height:37px;color:white;text-align: center;margin:auto;line-height:50px;}
+        #free a:hover{border-bottom:1px solid white;}
+        h1{width:200px;height:70px;float:left;}
+        h1 img{width:100px;height:auto;padding:30px 50px;}
+        #nav1{width:500px;height:400px;clear:both;float:left;}
+        #nav1>ul{width:200px;height:389px;margin-top:10px;}
+        #nav1>ul>li{width:200px;height:auto;margin:0 auto;padding:15px 0;text-align:center;transition:all 0.2s ease;}
+        #nav1>ul>li:hover{font-weight:600;font-size:16px;border-bottom:1px solid #333;}
+        #nav2{width:400px;height:70px;float:right;}
+        #nav2 ul li:hover a{font-weight:600;}
+        form{display:inline;width:100px;height:70px;float:left;}
+        #nav2 ul li{width:80px;height:30px;float:right;margin-top:15px;}
+        #search1{width:30px;height:30px;}
+        #banner{width:600px;height:400px;float:left;}
+        #ban_img{width:700px;height:400px;float:left;}
+        #banner p{font-size:30px;}
+        #ban_img img{width:auto;height:400px;float:left}
+        section{clear:both;width:100%;height:2500px;background-color:#fffef2;}
+        .child li a{font-weight:500;font-size:16px;color:#555;}
+        .child li:hover a{color:#333;font-weight:600;}
+        #child1{display:none;width:250px;height:382px;position:absolute;top:50px;left:200px;background-color:#fffef2;padding-top:88px;}
+        #child1 li{line-height:40px;}
+        #child2{display:none;width:250px;height:340px;position:absolute;top:50px;left:200px;background-color:#fffef2;padding-top:130px;}
+        #child2 li{line-height:40px;}
+        #child3{display:none;width:250px;height:280px;position:absolute;top:50px;left:200px;background-color:#fffef2;padding-top:190px;}
+        #child3 li{line-height:40px;}
+        #nav1>ul>li:hover .child{display:block;position:absolute;left:200px;}
+        #box1{width:210px;height:50px;font-size:20px;border:1px solid #333;line-height:50px;margin-top:30px;padding-left:10px;}
+        #box1 a{display:block;}
+        #box1:hover{background-color:#333;}
+        #box1:hover a{color:#fffef2;}
+        #box2{width:210px;height:50px;font-size:20px;border:1px solid #fffef2;line-height:50px;color:white;margin-top:30px;}
+        #box2 a{display:block;color:#fffef2;padding-left:10px;}
+        #box2:hover{background-color:#333;}
+        #box2:hover a{color:#fffef2;}
+        #box3{margin:0 auto;width:230px;height:50px;font-size:20px;border:1px solid #333;line-height:50px;color:white;margin-top:30px;text-align:center;}
+        #box3 a{display:block;padding-left:10px;}
+        #box3:hover{background-color:#333;}
+        #box3:hover a{color:#fffef2;}
+        #best{width:100%;height:450px;float:left;overflow:hidden;padding:0;margin-top:10px;}
+        #best h3{width:300px;height:50px;font-size:30px;margin-left:20px;border-bottom:1px solid #333;color:#333;}
+        #image_box1{width:100%;height:400px;}
+        #image_box1 figure{width:375px;height:400px;float: left;overflow:hidden;}
+        #image_box1 figure a img{display:block;margin:0 auto;height:300px;width:auto;padding-top:20px;
+        overflow:hidden;transition:all 0.5s ease;}
+        #image_box1 p{clear:both;}
+        .fig_p1{text-align:center;}
+        .fig_p2{text-align:center;color:#444;}
+        .best_images{overflow:hidden;transition:all 0.5s ease;}
+        figure:hover .fig_p1{text-decoration:underline;}
+        figure:hover img{transform:scale(1.05);}
+        #vitamin{width:100%;height:500px;float:left;clear:both;margin-top:100px;}
+        #v_t{position:absolute;color:#fffef2;float:left;margin-top:30px;margin-left:20px;}
+        #v_i{position:absolute fixed;float:left;width:auto;height:500px;z-index:-1;}
+        #v_i img{float:left;width:auto;height:500px;z-index:-1;}
+        #v_t h3{font-size:27px;font-weight:500;margin:10px 0;}
+        #v_t p{line-height:20px;}
+        #image_box2{width:1050px;height:500px;float:left;}
+        #box_2{width:900px;height:400px;margin:0 auto;padding-top:100px;}
+        #image_box2 figure{float:left;height:320px;width:;}
+        #image_box2>#box_2>figure>a>img{height:300px;width:300px;float:left;transition:all 0.5s ease;}
+        #image_box2>#box_2>figure>a>p{text-align:center;}
+        #say{width:100%;height:600px;margin:0 auto;clear:both;padding-top:100px;border:1px solid #fffef2;}
+        #fix{background:url(images/fix.jpg) no-repeat left 0px fixed;background-size:cover;width:100%; height:600px;padding-top:250px;box-sizing:border-box;}
+        #fix p{text-align:center;font-size:50px;line-height:70px;letter-spacing:-.09375rem;font-weight:500;color:white;text-shadow:0px 1px 5px black;}
+        #place{width:100%;height:700px;float:left;clear:both;margin-top:100px;background:#fffef2;}
+        #p_t{margin:0 auto;width:500px;height:200px;margin-top:30px;text-align:center;}
+        #p_t h3{font-size:27px;font-weight:500;margin:10px 0;}
+        #p_i{width:90%;height:400px;margin:0 auto;}
+        #p_i p{padding-top:10px;}
+        #p_i figure{width:32%;height:400px;float:left;padding-left:20px;}
+        #p_i figure a{display:block;width:550px;height:350px;overflow:hidden;}
+        #p_i img{display:block;width:550px;height:350px;margin:0 auto;opacity:0.7;transition:all 0.3s;}
+        #p_i img:hover{opacity:1;}
+        footer{clear:both;width:100%;height:300px;background:#222;}
+        footer ul li a{color:#fffef2;}
+        #ft_top{width:90%;height:70px;margin:20px auto;padding-top:40px;}
+        #ft_top li{width:50%;height:70px;float:left;text-align:left;padding-top:20px;padding-left:30px;box-sizing:border-box;}
+        #ft_top li a{display:block;width:99%;height:30px;border-bottom:1px solid #fffef2;line-height:15px;}
+        #ft_top li a p{float:right;}
+        #ft_bottom{width:90%;height:70px;margin:20px auto;}
+        #ft_bottom li{width:16.6%;height:50px;float:left;text-align:left;padding-top:20px;padding-left:30px;box-sizing:border-box;}
+        #ft_bottom li a{display:block;width:250px;height:30px;border-bottom:1px solid #fffef2;line-height:15px;}
+        #ft_bottom li a p{float:right;}
+    </style>
+</head>
+<body>
+    <header>
+        <div id="free"><a href="#">전 제품 무료배송 혜택을 즐겨보세요.</a></div>
+        <div id="pink"></div>
+        <h1><a href="#"><img src="images/logo1.png" alt="Aesop"></a></h1>
+        <div id="nav2">
+            <!--<form action="#" method="#"><input type="search" id="search_user" size="30">검색창
+            <img id="search1" src="images/search.png" alt="돋보기"></form>-->
+                <ul>
+                    <li><a href="#">카트</a></li>
+                    <li><a href="#">로그인</a></li>
+                </ul>
+                </div>
+        <nav id="nav1">
+            <ul>
+                <li><a href="#">제품보기</a>
+                    <ul id="child1" class="child">
+                        <li><a href="#">스킨</a></li>
+                        <li><a href="#">헤어</a></li>
+                        <li><a href="#">바디 & 핸드</a></li>
+                        <li><a href="#">향수</a></li>
+                        <li><a href="#">홈</a></li>
+                        <li><a href="#">키트 & 여행제품</a></li>
+                        <li><a href="#">기프트 가이드</a></li>
+                    </ul></li>               
+                <li><a href="#">읽기</a>
+                    <ul id="child2" class="child">
+                        <li><a href="#">더아테네움</a></li>
+                        <li><a href="#">회사 소개</a></li>
+                        <li><a href="#">철학</a></li>
+                        <li><a href="#">Taxonomy of design</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">스토리</a>
+                    <ul id="child3" class="child">
+                        <li><a href="#">현재 위치에서 찾기</a></li>
+                        <li><a href="#">또는 도로명으로 검색</a></li>
+                        <li><a href="#">도시로 검색</a></li>
+                    </ul>
+                </li>
+            </ul>
+            
+        </nav>
+        <div id="banner">
+            <p>지혜로운 보답</p>
+            <p><span style="font-size:18px;">학교나 가정, 그곳이 어디든 평온한 순간을 선사할 수 있도록 <br>다양한 기프트 옵션과 감각적인 선물을 마련했습니다.</span></p>
+            <div id="box1"><a href="#">기프트 보기 →</a></div>
+        </div>
+        <div id="ban_img"><img src="images/banner.jpg" alt="gift"></div>
+    </header>
+   
+    <section>
+        <article id="best">
+            <h3>Best</h3>
+            <div id="image_box1">
+                <figure><a href="#"><div class="best_images"><img src="images/1.jpg" alt="best1"></div><p class="fig_p1">너처러</p><p class="fig_p2">감사한 마음을 전하는 키트</p></a></figure>
+                <figure><a href="#"><div class="best_images"><img src="images/2.jpg" alt="best2"></div><p class="fig_p1">레저럭션 듀엣</p><p class="fig_p2">손을 깨끗하게 세정하고 영양을 공급합니다.</p></a></figure>
+                <figure><a href="#"><div class="best_images"><img src="images/3.jpg" alt="best3"></div><p class="fig_p1">테싯 오 드 퍼퓸</p><p class="fig_p2">상쾌한, 그린, 시트러스향</p></a></figure>
+                <figure><a href="#"><div class="best_images"><img src="images/4.jpg" alt="best4"></div><p class="fig_p1">레저럭션 아로마틱 핸드 밤</p><p class="fig_p2">시트러스, 우디, 허브향</p></a></figure>
+                <figure><a href="#"><div class="best_images"><img src="images/5.jpg" alt="best5"></div><p class="fig_p1">로즈 오 드 퍼퓸</p><p class="fig_p2">플로럴, 그린, 우디</p></a></figure>
+                <figure><a href="#"><div class="best_images"><img src="images/6.jpg" alt="best6"></div><p class="fig_p1">제라늄 리프 바디 클렌저</p><p class="fig_p2">상쾌함을 선사하는 부드러운 젤 타입 클렌저</p></a></figure>
+                <figure><a href="#"><div class="best_images"><img src="images/8.jpg" alt="best7"></div><p class="fig_p1">파슬리 씨드 안티 옥시던트 세럼</p><p class="fig_p2">가벼운 질감, 빠른 흡수로 피부 강화</p></a></figure>
+            </div>
+        </article>
+        <article id="vitamin">
+                <div id="v_t">
+                <p>아침과 저녁을 위한 비타민 C</p>
+                <h3>피부 구조를 탄탄하게 지탱해주는 성분</h3>
+                <p>비타민 C는 피부의 탄력성을 강화하는 데 필수적입니다.<br>
+                아침과 저녁에 모두 사용하기 적합하며 시간을 두고 <br>
+                꾸준히 사용했을 때 뛰어난 효과를 선사합니다.</p>
+                <div id="box2"><a href="#">비타민C 알아보기 →</a></div></div>
+                <div id="v_i"><img src="images/vitamin.jpg"></div>
+                <div id="image_box2">
+                    <div id="box_2">
+                    <figure><a href="https://www.aesop.com/kr/p/skin/hydrate/b-triple-c-facial-balancing-gel/">
+                        <img src="images/2-1.png" alt="vit1"><p class="fig_p1">비 트리플 씨 페이셜 밸런싱 젤</p></a></figure>
+                    <figure><a href="https://www.aesop.com/kr/p/skin/bundle/vitamin-c-for-day-night/">
+                        <img src="images/2-2.png" alt="vit2"><p class="fig_p1">파슬리 씨드 안티 옥시던트 아이 크림</p></a></figure>
+                    <figure><a href="https://www.aesop.com/kr/p/skin/hydrate/lucent-facial-concentrate/">
+                        <img src="images/2-3.png" alt="vit2"><p class="fig_p1">루센트 페이셜 컨센트레이트</p></a></figure>
+                    </div>
+                </div>
+        </article>
+        <article id="say">
+            <div id="fix">
+            <p>‘It is high time to rekindle the stars.’</p>
+            <p><span style="font-size:30px;">Guillaume Apollinaire</span></p></div>
+        </article>
+       <article id="place">
+           <div id="p_t">
+            <h3>스토어 로케이터</h3>
+            <p>매장에서는 이솝 컨설턴트가 고객 여러분을 따뜻하게 맞이하고 <br>
+                기프트 구매를 위한 맞춤형 컨설팅을 제공해드립니다.  </p>
+                <div id="box3"><a href="#">가까운 스토어 찾기 →</a></div></div>
+            <div id="p_i">
+                <figure><a href="#"><img src="images/p1.jpg" alt="이솝삼청"></a><p class="fig_p1">이솝 삼청</p></figure>
+                <figure><a href="#"><img src="images/p2.jpg" alt="이솝롯데월드몰"></a><p class="fig_p1">이솝 롯데월드몰</p></figure>
+                <figure><a href="#"><img src="images/p3.jpg" alt="이솝여의도IFC몰"></a><p class="fig_p1">이솝 여의도IFC몰</p></figure>
+            </div>
+        </article>
+    </section>
+    <footer>
+        <ul id="ft_top">
+            <li><a href="#">이메일 주소<p>+</p></a></li>
+            <li><a href="#">지속가능성<p>+</p></a></li>
+        </ul>
+        <ul id="ft_bottom">
+            <li><a href="#">주문 및 지원<p>+</p></a></li>
+            <li><a href="#">서비스<p>+</p></a></li>
+            <li><a href="#">위치 기본 설정<p>+</p></a></li>
+            <li><a href="#">소개<p>+</p></a></li>
+            <li><a href="#">소셜<p>+</p></a></li>
+            <li><a href="#">주의<p>+</p></a></li>
+        </ul>
+    </footer>
+</body>
+</html>

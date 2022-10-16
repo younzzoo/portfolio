@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300&display=swap" rel="stylesheet">
+    <title>WM엔터테인먼트</title>
+    <style>
+        *{margin:0;padding:0;}
+        ul li{list-style: none;}
+        img{border: 0;}
+        a{text-decoration:none;color: black;}
+        body{background-color: #322550;}
+        header{width:15%;height:700px;float:left;background-color:#322550;}
+        h1 img{width:120px;height:auto;display:block;margin:0 auto;padding:40px 0;}
+        #nav{z-index:10;}
+        #nav1>li>a{color:white;font-size:27px;font-weight:600;padding:20px;font-family: 'Varela Round', sans-serif;}
+        #nav1>li{display:block;margin:0 auto;width:95%;height:auto;line-height:50px;text-align:center;font-size:20px;}
+        #nav1 li a span{width:200px;}
+        #nav1 ul{height:0;overflow:hidden;padding-top:10px;}
+        #nav1 li ul{display:block;margin:0 auto;width:90%;}
+        #nav1 li ul li{display:block;margin:0 auto;width:150px;text-align:center;}
+        #nav1 li ul li a{color:#9183c4;font-family: 'Varela Round', sans-serif;}
+        #nav1 li ul li a:hover{color:white;}
+        #nav1 #li-1:hover #ul-1{height:200px;}
+        #nav1 #li-2:hover #ul-2{height:250px;}
+        #nav1 #li-3:hover #ul-3{height:150px;}
+        #nav1 #li-4:hover #ul-4{height:100px;}
+        #main{width:85%;height:1500px;background-color:#322550;float:left;}
+        #main #main_bg img{position:absolute;width:75%;height:800px;margin:0 auto;z-index:11;left:15%;top:75px;}
+        #main #main_v{width:auto;height:900px;float:left;}
+        /*video{position:absolute fixed;width:auto;height:900px;margin:0 auto;z-index:-1;padding-top:30px;}*/
+        section{width:100%;height:700px;float:left;background-color:#322550;color:white;clear:both;}
+        
+        .album_art{width:200px;height:260px;float:left;}
+        a{font-family: 'Noto Sans KR', sans-serif;}
+        p{font-family: 'Noto Sans KR', sans-serif;}
+        .album_art>img{width:200px;height:200px;transition:all 01s ease;cursor:pointer;}
+        .album_art img:hover{border-radius:50%;transform:rotate(360deg);}
+        .album_art:hover p{display:block;}
+        #np{width:1310px;height:400px;margin:0 auto;}
+        #notice{width:500px;height:300px;float:left;}
+        .text{width:400px;height:200px;line-height:50px;float:left;padding-left:30px;padding-top:25px;}
+        .text li a{color:white;}
+        .text li a:hover{text-decoration:underline;}
+        .time{width:50px;height:200px;line-height:50px;float:left;text-align:right;padding-top:25px;}
+        h3{text-align:center;font-size:24px;padding-top:20px;padding-bottom:10px;border-bottom:3px solid white;}
+        #press{width:500px;height:300px;float:left;margin-left:300px;}
+        footer{width:100%;height:100px;float:left;background-color:#4d3d6c;color:white;}
+        footer ul{padding-top:12px;padding-left:30px;}
+        footer ul li{float:left;padding-left:20px;}
+        footer ul li a{color:white;}
+        footer p{clear: both;float:right;padding-right:20px;}
+        #adress{font-size:20px;padding-bottom:7px;}
+
+#bubble_1{position:absolute;width:250px;height:250px;border-radius:50%;z-index:100;
+        background:#beafdd;top:100px;left:300px;box-shadow:0 0 20px #beafdd, 0 0 30px #806ea3,0 0 40px #322550;
+        animation-duration:8s ease-in-out;animation-name:bubble;animation-direction:alternate;
+        animation-iteration-count:infinite;
+        -webkit-animation-duration:10s;-webkit-animation-name:bubble;
+        -moz-animation-duration:3s;-moz-animation-name:bubble;}
+#bubble_2{position:absolute;top:300px;left:450px;width:100px;height:100px;border-radius:50%;z-index:100;
+        background:#beafdd;box-shadow:0 0 40px #beafdd, 0 0 30px #806ea3,0 0 40px #322550;
+        animation-duration:7s ease;animation-name:bubble;animation-direction:alternate;
+        animation-iteration-count:infinite;
+        -webkit-animation-duration:7s;-webkit-animation-name:bubble;
+        -moz-animation-duration:7s;-moz-animation-name:bubble;}
+#bubble_3{position:absolute;top:600px;left:1600px;width:300px;height:300px;border-radius:50%;z-index:100;
+        background:#beafdd;box-shadow:0 0 20px #beafdd, 0 0 30px #806ea3,0 0 40px #322550;
+        animation-duration:4s ease-in;animation-name:bubble;animation-direction:alternate;
+        animation-iteration-count:infinite;
+        -webkit-animation-duration:7s;-webkit-animation-name:bubble;
+        -moz-animation-duration:7s;-moz-animation-name:bubble;}
+#bubble_4{position:absolute;top:100px;right:100px;width:100px;height:100px;border-radius:50%;z-index:100;
+        background:#beafdd;box-shadow:0 0 20px #beafdd, 0 0 30px #806ea3,0 0 40px #322550;
+        animation-duration:2s ease-in;animation-name:bubble;animation-direction:alternate;
+        animation-iteration-count:infinite;
+        -webkit-animation-duration:7s;-webkit-animation-name:bubble;
+        -moz-animation-duration:7s;-moz-animation-name:bubble;}
+#bubble_5{position:absolute;top:200px;right:150px;width:50px;height:50px;border-radius:50%;z-index:100;
+        background:#beafdd;box-shadow:0 0 20px #beafdd, 0 0 30px #806ea3,0 0 40px #322550;
+        animation-duration:6s ease-out;animation-name:bubble;animation-direction:alternate;
+        animation-iteration-count:infinite;
+        -webkit-animation-duration:7s;-webkit-animation-name:bubble;
+        -moz-animation-duration:7s;-moz-animation-name:bubble;}
+        @keyframes bubble{0%{transform:scale(0);opacity:0;}100%{transform:scale(0.8);opacity:0.3;}}
+        @-webkit-keyframes bubble{0%{transform:scale(0);}100%{transform:scale(0.8);opacity:0.5;}}
+        @-moz-keyframes bubble{0%{transform:scale(0);}100%{transform:scale(0.8);opacity:0.5;}}
+.tabs {position:absolute;width:85%;height:1500px;left:15%;top:0;box-sizing:border-box;margin-top:75px;}
+
+.tabs input[type=radio] {display: none;}
+.tabs label { display: block;
+  float: left;
+  cursor: pointer;
+  -webkit-transition: background-color 150ms ease-in-out;
+  transition: background-color 150ms ease-in-out;
+}
+.tabs [id^="tab"]:checked + label {
+  border-bottom-color: white;
+  background: white;
+  color: #333;
+}
+.tab-content {
+  display:none;
+  float: left;
+  width:auto; height:1500px;
+}
+
+#tab1:checked ~ #tab-content1,#tab2:checked ~ #tab-content2,#tab3:checked ~ #tab-content3,#tab4:checked ~ #tab-content4,#tab5:checked ~ #tab-content5
+{display: block;width:auto;height:1500px;}
+
+.tab-content video{position:absolute;z-index:10;left:0;top:0;width:auto;height:800px;}
+.tab_1{position:absolute;z-index:15;width:50px;height:50px;background:#9183c4;right:485px;top:180px;border-radius:50%;}
+.tab_2{position:absolute;z-index:15;width:50px;height:50px;background:#9183c4;right:450px;top:280px;border-radius:50%;}
+.tab_3{position:absolute;z-index:15;width:50px;height:50px;background:#9183c4;right:435px;top:380px;border-radius:50%;}
+.tab_4{position:absolute;z-index:15;width:50px;height:50px;background:#9183c4;right:450px;top:480px;border-radius:50%;}
+.tab_5{position:absolute;z-index:15;width:50px;height:50px;background:#9183c4;right:485px;top:580px;border-radius:50%;}
+.tabs:hover .mv_name{opacity:1;}
+.mv_name{z-index:100;width:250px;height:30px;color:white;transform:translate(80px,15px);opacity:0;;transition:all 1s ease;}
+
+.album_art p{width:200px;height:60px;color:white;clear:both;float:left;text-align:center;padding-top:10px;display:none;}
+.album_art1{position:absolute;top:900px;left:-240px;z-index:15;width:200px;height:260px;}
+.album_art2{position:absolute;top:900px;left:-40px;z-index:15;width:200px;height:260px;}
+.album_art3{position:absolute;top:900px;left:160px;z-index:15;width:200px;height:260px;}
+.album_art4{position:absolute;top:900px;left:360px;z-index:15;width:200px;height:260px;}
+.album_art5{position:absolute;top:900px;left:560px;z-index:15;width:200px;height:260px;}
+.album_art6{position:absolute;top:900px;left:760px;z-index:15;width:200px;height:260px;}
+.album_art7{position:absolute;top:900px;left:960px;z-index:15;width:200px;height:260px;}
+.album_art8{position:absolute;top:900px;left:1160px;z-index:15;width:200px;height:260px;}
+.album_art9{position:absolute;top:900px;left:1360px;z-index:15;width:200px;height:260px;}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1><a href="#"><img src="images/newlogo.jpg" alt="로고"></a></h1>
+        <nav>
+            <ul id="nav1">
+                <li id="li-1"><a href="#"><span data-hover="COMPANY">COMPANY</span></a>
+                <ul id="ul-1">
+                    <li><a href="#">INTRODUCTION</a></li>
+                    <li><a href="#">BUSINESS</a></li>
+                    <li><a href="#">ORGANIZATION</a></li>
+                    <li><a href="#">CONTACT US</a></li>
+                </ul>
+                </li>
+
+                <li id="li-2"><a href="#"><span data-hover="ARTIST">ARTIST</span></a>
+                    <ul id="ul-2">
+                        <li><a href="#">B1A4</a></li>
+                        <li><a href="#">OH MY GIRL</a></li>
+                        <li><a href="#">SANDLE</a></li>
+                        <li><a href="#">ON N OFF</a></li>
+                        <li><a href="#">YooA</a></li>
+                    </ul></li>
+                <li id="li-3"><a href="#"><span data-hover="AUDITION">AUDITION</span></a>
+                    <ul id="ul-3">
+                        <li><a href="#">INFORMATION</a></li>
+                        <li><a href="#">NOTICE</a></li>
+                        <li><a href="#">FNA</a></li>
+                    </ul></li>
+                <li id="li-4"><a href="#"><span data-hover="PR CENTER">PR CENTER</span></a>
+                    <ul id="ul-4">
+                        <li><a href="#">NEWS</a></li>
+                        <li><a href="#">PRESS</a></li>
+                    </ul></li>
+            </ul>
+        </nav>
+    </header>
+    <div id="main">
+        <div id="main_bg"><img src="images/maincover.png" alt="circle"></div>
+        <div class="tabs">
+            <input type="radio" name="tabs" id="tab1" class="alltab" >
+            <label for="tab1" class="tab_1">
+                <p class="mv_name">B1A4 '영화처럼'</p>
+          </label>
+            <input type="radio" name="tabs" id="tab2" class="alltab" checked>
+            <label for="tab2" class="tab_2">
+                <p class="mv_name">Oh my girl 'Dun Dun Dance'</p>
+          </label>
+            <input type="radio" name="tabs" id="tab3" class="alltab">
+            <label for="tab3" class="tab_3">
+                <p class="mv_name">ONF '춤춰'</p>
+          </label>
+            <input type="radio" name="tabs" id="tab4" class="alltab">
+            <label for="tab4" class="tab_4">
+                <p class="mv_name">SANDLE '날씨 좋은 날'</p>
+          </label>
+          <input type="radio" name="tabs" id="tab5"  class="alltab">
+            <label for="tab5" class="tab_5">
+                <p class="mv_name">YooA '숲의 아이'</p>
+          </label>
+          
+            <div id="tab-content1" class="tab-content">
+                <video src="images/B1A4.mp4" alt="B1A4_mv" autoplay loop muted></video>
+               <div class="album_art1 album_art"><img src="images/5681411.jpg" title="10 TIMES" alt="10 TIMES">
+                    <p>B1A4 디지털싱글<br>
+                    「10 TIMES」</p>
+                 </div>
+                 <div class="album_art2 album_art"><img src="images/5039978.jpg" title="Origine(오리진)" alt="Origine(오리진)">
+                    <p>B1A4 정규 4집<br>
+                    「Origine(오리진)」</p>
+                 </div>
+                 <div class="album_art3 album_art"><img src="images/2997742.jpg" title="Bana No Hi" alt="Bana No Hi">
+                    <p>B1A4 디지털싱글<br>
+                    「Bana No Hi」</p>
+                 </div>
+                 <div class="album_art5 album_art"><img src="images/2443913.jpg" title="5" alt="5">
+                    <p>B1A4 정규 앨범<br>
+                    「5」</p>
+                 </div>
+                 <div class="album_art4 album_art"><img src="images/2477806.jpg" title="3 (Standard Edition)" alt="3 (Standard Edition)">
+                    <p>B1A4<br>
+                    「3 (Standard Edition)」</p>
+                 </div>
+                 <div class="album_art6 album_art"><img src="images/2342287.jpg" title="Do You Remember" alt="Do You Remember">
+                    <p>B1A4 디지털싱글<br>
+                    「Do You Remember」</p>
+                 </div>
+                 <div class="album_art7 album_art"><img src="images/2221149.jpg" title="Rollin'" alt="Rollin'">
+                    <p>B1A4 미니 7집<br>
+                    「Rollin'」</p>
+                 </div>
+                <div class="album_art8 album_art"><img src="images/2064930.jpg" title="Follow Me" alt="Follow Me">
+                    <p>B1A4<br>
+                    「Follow Me」</p>
+                 </div>
+                 <div class="album_art9 album_art"><img src="images/1616939.jpg" title="GOOD TIMING" alt="GOOD TIMING">
+                    <p>B1A4 정규 4집<br>
+                        「GOOD TIMING」</p>
+                </div>
+            </div>
+            <div id="tab-content2" class="tab-content">
+                <video src="images/오마이걸.mp4" alt="오마이걸_mv" autoplay loop muted></video>
+                <div class="album_art1 album_art"><img src="images/1.jpg" title="NONSTOP" alt="NONSTOP">
+                    <p>오마이걸 미니 7집<br>
+                    「살짝 설렜어」</p>
+                 </div>
+                 <div class="album_art2 album_art"><img src="images/2.jpg" title="BUNGEE" alt="BUNGEE">
+                    <p>오마이걸 스페셜앨범<br>
+                        「FALL IN LOVE」</p>
+                </div>
+                <div class="album_art3 album_art"><img src="images/3.jpg" title="THE FIFTH SEASON" alt="THE FIFTH SEASON">
+                    <p>오마이걸 정규 1집<br>
+                        「The Fifth Season」</p>
+                </div>
+                <div class="album_art4 album_art"><img src="images/5.jpg" title="비밀정원" alt="비밀정원">
+                    <p>오마이걸 미니 5집<br>
+                        「비밀정원」</p>
+                </div>
+                <div class="album_art5 album_art"><img src="images/4.jpg" title="내 얘길 들어봐" alt="내 얘길 들어봐">
+                    <p>오마이걸 스페셜싱글<br>
+                        「내 얘길 들어봐」</p>
+                </div>
+                <div class="album_art6 album_art"><img src="images/6.jpg" title="WINDY DAY" alt="WINDY DAY">
+                    <p>오마이걸 리패키지<br>
+                        「WINDY DAY」</p>
+                </div>
+                <div class="album_art7 album_art"><img src="images/7.jpg" title="PINK OCEAN" alt="PINK OCEAN">
+                    <p>오마이걸 미니 3집<br>
+                        「PINK OCEAN」</p>
+                </div>
+                <div class="album_art8 album_art"><img src="images/8.jpg" title="CLOSER" alt="CLOSER">
+                    <p>오마이걸 미니 2집<br>
+                        「CLOSER」</p>
+                </div>
+               <div class="album_art9 album_art"><img src="images/9.jpg" title="OH MY GIRL" alt="OH MY GIRL">
+                    <p>오마이걸 미니 1집<br>
+                        「OH MY GIRL」</p>
+                </div>
+            </div>
+            <div id="tab-content3" class="tab-content">
+                <video src="images/온앤오프.mp4" alt="온앤오프_mv" autoplay loop muted></video>
+               <div class="album_art1 album_art"><img src="images/5739003.jpg" title="CITY OF ONF" alt="CITY OF ONF">
+                    <p>온앤오프 정규 1집 리패키지<br>
+                        「CITY OF ONF」</p>
+                </div>
+                <div class="album_art2 album_art"><img src="images/5246781.jpg" title="ONF : MY NAME" alt="ONF : MY NAME">
+                    <p>온앤오프 정규 1집<br>
+                        「ONF : MY NAME」</p>
+                </div>
+                <div class="album_art3 album_art"><img src="images/4775212.jpg" title="SPIN OFF" alt="SPIN OFF">
+                    <p>온앤오프 미니 5집<br>
+                        「SPIN OFFL」</p>
+                </div>
+                <div class="album_art4 album_art"><img src="images/3207334.jpg" title="GO LIVE" alt="GO LIVE">
+                    <p>온앤오프 미니 4집<br>
+                        「GO LIVE」</p>
+                </div>
+                <div class="album_art5 album_art"><img src="images/3109378.jpg" title="통통한 연애2 OST Part 1" alt="통통한 연애2 OST Part 1">
+                    <p>온앤오프<br>
+                        「통통한 연애2 OST Part 1」</p>
+                </div>
+                <div class="album_art6 album_art"><img src="images/2835389.jpg" title="WE MUST LOVE" alt="WE MUST LOVE">
+                    <p>온앤오프 미니 3집<br>
+                        「WE MUST LOVE」</p>
+                </div>
+                <div class="album_art7 album_art"><img src="images/2463403.jpg" title="YOU COMPLETE ME" alt="YOU COMPLETE ME">
+                    <p>온앤오프 미니 2집<br>
+                        「YOU COMPLETE ME」</p>
+                </div>
+                <div class="album_art8 album_art"><img src="images/2117435.jpg" title="ON/OFF" alt="ON/OFF">
+                    <p>온앤오프 미니 1집<br>
+                        「ON/OFF」</p>
+                </div>
+                <div class="album_art9 album_art"><img src="images/2487079 (1).jpg" title="축제 (Your Day)" alt="축제 (Your Day)">
+                    <p>온앤오프 디지털싱글<br>
+                        「축제 (Your Day)」</p>
+                </div>
+            </div>
+            <div id="tab-content4" class="tab-content">
+                <video src="images/산들.mp4" alt="산들_mv" autoplay loop muted></video>
+                <div class="album_art3 album_art"><img src="images/5548972.jpg" title="More Than Words" alt="More Than Words">
+                    <p>산들<br>
+                    「More Than Words」</p>
+                </div>
+                <div class="album_art4 album_art"><img src="images/4756055.jpg" title="생각집" alt="생각집">
+                    <p>산들<br>
+                    「생각집」</p>
+                </div>
+                <div class="album_art5 album_art"><img src="images/4686872.jpg" title="취기를 빌려" alt="취기를 빌려">
+                    <p>산들<br>
+                    「취기를 빌려」</p>
+                </div>
+                <div class="album_art6 album_art"><img src="images/3064449.jpg" title="날씨 좋은 날" alt="날씨 좋은 날">
+                    <p>산들<br>
+                    「날씨 좋은 날」</p>
+                </div>
+                <div class="album_art7 album_art"><img src="images/748065.jpg" title="그렇게 있어 줘" alt="그렇게 있어 줘">
+                    <p>산들 미니 앨범<br>
+                    「그렇게 있어 줘」</p>
+                </div>
+            </div>
+            <div id="tab-content5" class="tab-content">
+                <video src="images/유아.mp4" alt="유아_mv" autoplay loop muted></video>
+                <div class="album_art5 album_art"><img src="images/숲의아이.jpg" title="숲의아이" alt="숲의아이">
+                    <p>유아 미니 1집<br>
+                    「숲의 아이」</p>
+                </div>
+            </div>
+           
+           
+        </div>
+    </div>
+
+             <div id="bubble_1"></div>
+             <div id="bubble_2"></div>
+             <div id="bubble_3"></div>
+             <div id="bubble_4"></div> 
+             <div id="bubble_5"></div>
+        
+
+    <section>
+        <article>
+        <div id="np">
+        <div id="notice">
+            <h3>NOTICE</h3>
+            <ul>
+                <div class="text">
+                <li><a href="#">2021 WM SUMMER TOUR AUDITION</a></li>
+                <li><a href="#">2020 WM WINTER TOUR AUDITION</a></li>
+                <li><a href="#">2020 WM SUMMER TOUR AUDITION</a></li>
+                <li><a href="#">2019 WM WINTER TOUR AUDITION</a></li></div>
+                <div class="time">
+                <li><time datetime="2021-05-10">05-10</time></li>
+                <li><time datetime="2020-05-10">10-10</time></li>
+                <li><time datetime="2020-05-10">05-27</time></li>
+               <li><time datetime="2019-05-10">11-01</time></div>
+            </ul>
+        </div>
+        <div id="press">
+            <h3>PRESS</h3>
+            <ul>
+                <div class="text">
+                    <li><a href="#">오마이걸, 새 앨범 ‘Dear OHMYGIRL’ 트랙리스트 오픈 </a></li>
+                    <li><a href="#">오마이걸, 신보 ‘Dear OHMYGIRL’ 첫 콘셉트 포토 공개!</a></li>
+                    <li><a href="#">온앤오프, 새 앨범 ‘CITY OF ONF’ 의문의 새 티저 오픈</a></li>
+                    <li><a href="#">오마이걸, 새 앨범 ‘Dear OHMYGIRL’ 첫 트랙 필름 공개!</a></li></div>
+                    <div class="time">
+                    <li><time datetime="2021-05-10">04-27</time></li>
+                    <li><time datetime="2021-05-10">04-26</time></li>
+                    <li><time datetime="2021-05-10">04-25</time></li>
+                   <li><time datetime="2021-05-10">04-25</time></div>
+            </ul>
+        </div>
+    </div>
+        </article>
+    </section>
+    <footer>
+        <ul>
+            <li><a href="#">개인정보 취급방침</a></li>
+            <li><a href="#">청소년 보호정책</a></li>
+            <li><a href="#">이용약관</a></li>
+            <li><a href="#">고객센터</a></li>
+        </ul> 
+        <p id="adress">[04012] 8, World Cup-ro 15-gil, Mapo-gu, Seoul, Republic of Korea</p>
+        <p>Copyright © WMentertainment Corp. All rights reserved.</p>
+    </footer>
+</body>
+</html>
