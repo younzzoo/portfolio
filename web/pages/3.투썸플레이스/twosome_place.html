@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TWOSOME PLACE</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Kalam:wght@300&family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
+    <style>
+        *{margin:0;padding:0;}
+        ul li{list-style:none;}
+        img{border:0;}
+        a{text-decoration:none;color:black;}
+        header{position:fixed;left:0;top:0;width:100%;height:100px;background-color:#a5051c;z-index:99;}
+        #header{width:80%;height:100px;margin:0 auto;}
+        h1{width:20%;height:100px;float:left;}
+        h1 img{width:80%;height:auto;margin:0 auto;padding-top:30px;}
+        #top{width:70%;height:40px;float:left;}
+        #nav1{padding-left:820px;width:70%;margin:0 auto;}
+        #nav1 li{float:left;padding-left:30px;line-height:50px;}
+        #nav1 li a{font-size:14px;color:white;font-family: 'Noto Sans KR', sans-serif;}
+        #nav1 li:hover a{color:black;}
+        #bottom{width:79%;height:80px;float:left;}
+        #nav2{width:100%;height:80px;padding-left:130px;box-sizing:border-box;}
+        #nav2>li{float:left;width:180px;height:80px;padding:20px 0;text-align:center;box-sizing:border-box;margin-left:30px;}
+        #nav2>li>a{display:block;font-size:18px;height:55px;font-family: 'Noto Sans KR', sans-serif;color:white;}
+        #nav2 ul a{color:white;font-size:14px;font-family: 'Noto Sans KR', sans-serif;}
+        #nav2 ul{display:none;width:100%;height:290px;;margin-top:10px;}
+        #nav2 ul li{padding-top:10px;}
+        #menu{display:none;position:absolute;top:100px;left:0;width:100%;height:290px;background:#a5051c;z-index:-1;opacity:0.7;}
+        #nav2:hover ul{display:block;margin-top:-25px;}
+        #nav2:hover #menu{display:block;}
+        #nav2>li:hover >a{font-weight:bold;}
+        #nav2>li>ul>li{margin-top:10px;}
+        #nav2>li>ul>li:hover a{color:black;font-weight:600;}
+        section{width:100%;height:3000px;margin-top:100px;}
+        #main1{width:100%;height:700px;background:url(images/main1배경1.jpg)no-repeat;}
+        #main1ani1{position:absolute;top:100px;left:200px;z-index:1;
+        background:url(images/main1.png) no-repeat center center padding-box;width:500px;height:500px;
+        animation-duration:2s;animation-name:mainani1-1;animation-direction:alternate;
+        animation-iteration-count:initial;
+        -webkit-animation-duration:2s ;-webkit-animation-name:mainani1-1;
+        -moz-animation-duration:2s;-moz-animation-name:mainani1-1;}
+        #main1ani2{position:absolute;top:230px;left:550px;z-index:1;
+        background:url(images/main1-2.png) no-repeat center center padding-box;width:600px;height:600px;
+        animation-duration:4s;animation-name:mainani1;animation-direction:alternate;
+        animation-iteration-count:initial;
+        -webkit-animation-duration:4s ;-webkit-animation-name:mainani1-2;
+        -moz-animation-duration:4s ;-moz-animation-name:mainani1-2;}
+        #main1ani3{position:absolute;top:100px;left:950px;z-index:1;
+        background:url(images/main1-3.png) no-repeat center center padding-box;width:600px;height:600px;
+        animation-duration:4s;animation-name:mainani1-3;animation-direction:alternate;
+        animation-iteration-count:initial;
+        -webkit-animation-duration:4s ;-webkit-animation-name:mainani1-3;
+        -moz-animation-duration:4s ;-moz-animation-name:mainani1-3;}
+        @keyframes mainani1-1{0%{opacity:0;}100%{opacity:1;}}
+        @-webkit-keyframes mainani1-1{0%{opacity:0;}100%{opacity:1;}}
+        @-moz-keyframes mainani1-1{0%{opacity:0;}100%{opacity:1;}}
+        @keyframes mainani1-2{0%{opacity:0;}20%{opacity:0;}100%{opacity:1;}}
+        @-webkit-keyframes mainani1-2{0%{opacity:0;}20%{opacity:0;}100%{opacity:1;}}
+        @-moz-keyframes mainani1-2{0%{opacity:0;}20%{opacity:0;}100%{opacity:1;}}
+        @keyframes mainani1-3{0%{opacity:0;}40%{opacity:0;}100%{opacity:1;}}
+        @-webkit-keyframes mainani1-3{0%{opacity:0;}40%{opacity:0;}100%{opacity:1;}}
+        @-moz-keyframes mainani1-3{0%{opacity:0;}40%{opacity:0;}100%{opacity:1;}}
+        #main_map{width:100%;height:170px;background-color:ivory;box-sizing:border-box;}
+        #main_map ul{width:840px;margin:0 auto;padding-top:15px;}
+        #main_map img{width:100px;height:105px;float:left;padding:20px;transform:scale(0.9);transition:all 0.3s;}
+        #main_map img:hover{transform:scale(0.95);}
+        #main2{width:100%;height:500px;background-color:rgb(236, 210, 160);float:left;overflow:hidden;cursor: pointer;}
+        #main2ani1{float:left;transition:all 1s ease;background:url(images/main2-1.png) no-repeat center center padding-box;
+        width:500px;height:500px;transform:translateX(-500px);}
+        #main2:hover #main2ani1{transform:translateX(500px);}
+        #main2:hover #main2ani2{transform:translateX(500px);}
+        #main2ani2{float:left;width:500px;height:500px;padding:50px;
+        padding-top:150px;transition:all 1s ease;transform:translateX(1500px);}
+        #main2ani2 p{margin-bottom:20px;font-family: 'Noto Sans KR', sans-serif;}   
+        #box1{width:150px;height:40px;font-size:20px;border:1px solid #333;line-height:40px;margin-top:30px;}
+        #box1 a{display:block;text-align:center;font-size:16px;font-family: 'Noto Sans KR', sans-serif;}
+        #box1:hover{background-color:#333;}
+        #box1:hover a{color:#fffef2;}    
+        #main3{width:100%;height:600px;background-color:#b5bb73;float:left;}
+        #main3ani1{position:absolute;top:1500px;left:700px;z-index:10;
+        background:url(images/웨건.png) no-repeat center center padding-box;width:500px;height:500px;
+        animation-duration:4s;animation-name:mainani3-1;animation-direction:alternate;
+        animation-iteration-count:infinite;}
+        #main3ani2{position:absolute;top:1400px;left:1100px;z-index:10;
+        background:url(images/워터저그.png) no-repeat center center padding-box;width:500px;height:500px;
+        animation-duration:4s;animation-name:mainani3-1;animation-direction:alternate;
+        animation-iteration-count:infinite;}
+        #main3ani3{position:absolute;top:1550px;left:1400px;z-index:10;
+        background:url(images/아이스박스.png) no-repeat center center padding-box;width:500px;height:500px;
+        animation-duration:4s;animation-name:mainani3-1;animation-direction:alternate;
+        animation-iteration-count:infinite;}
+        #main3ani4{position:absolute;top:1500px;left:150px;z-index:10;
+        background:url(images/main3.png) no-repeat center center padding-box;width:500px;height:500px;
+        animation-duration:1s;animation-name:mainani3-1;animation-direction:alternate;
+        animation-iteration-count:initial;}
+        @keyframes mainani3-1{0%{opacity:0;}100%{opacity:1;}}
+        @-webkit-keyframes mainani3-1{0%{opacity:0;}100%{opacity:1;}}}
+        @-moz-keyframes mainani3-1{0%{opacity:0;}100%{opacity:1;}} 
+        #main4{width:100%;height:600px;background:url(images/main4-1.jpg)no-repeat;float:left;background-size:cover;}
+        #main5{width:100%;height:600px;background:url(images/main5.png)no-repeat fixed;float:left;background-size:cover;}
+        #main5_text{width:500px;padding-top:150px;margin:0 auto;}
+        #main5_text p{font-family: 'Kalam', cursive;}
+        #main5 p{color:white;font-size:30px;text-align:center;}
+        #tw{width:700px;height:200px;margin-top:60px;font-family: 'Montserrat', sans-serif;letter-spacing:0.2em;text-align:center;margin-left:-100px;}
+        footer{width:100%;height:120px;background-color:darkred;float:left;padding-left:70px;box-sizing:border-box;}
+        footer ul{width:100%;height:30px;margin-top:20px;margin-bottom:10px;}
+        footer ul li{float:left;margin-left:20px;}
+        footer a{color:#e2dfd8;font-family: 'Noto Sans KR', sans-serif;}
+        #ft1{width:100%;height:20px;clear:both;}
+        #ft1 p{float: left;margin-left:20px;color:#e2dfd8;font-size:13px;font-family: 'Noto Sans KR', sans-serif;}
+        #ft2{clear:both;}
+        #ft2 p{float: left;margin-left:20px;color:#e2dfd8;font-size:13px;font-family: 'Noto Sans KR', sans-serif;}
+    </style>
+</head>
+<body>
+    <header>
+        <div id=header>
+        <h1><a href="#"><img src="images/logo.png" alt="logo"></a></h1>
+        <nav id="top">
+            <ul id="nav1">
+                <li><a href="#">로그인</a></li>
+                <li><a href="#">회원가입</a></li>
+                <li><a href="#">고객센터</a></li>
+                <li><a href="#">뉴스 및 공지</a></li>
+            </ul>
+        </nav>
+        <nav id="bottom">
+            <ul id="nav2">
+                <li><a href="#">브랜드 스토리</a>
+                    <ul>
+                        <li><a href="#">브랜드이야기</a></li>
+                        <li><a href="#">커피이야기</a></li>
+                        <li><a href="#">디저트이야기</a></li>
+                        <li><a href="#">브랜드 필름</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">메뉴</a>
+                    <ul>
+                        <li><a href="#">NEW</a></li>
+                        <li><a href="#">커피&음료</a></li>
+                        <li><a href="#">디저트</a></li>
+                        <li><a href="#">델리</a></li>
+                        <li><a href="#">상품</a></li>
+                        <li><a href="#">홀케이크</a></li>
+                        <li><a href="#">영양성분표</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">매장정보</a>
+                    <ul>
+                        <li><a href="#">매장찾기</a></li>
+                    </ul>
+                </li>
+                <li><a href="#">이벤트</a>
+                    <ul>
+                        <li><a href="#">이벤트</a></li>
+                        <li><a href="#">매장별 이벤트</a></li>
+                        <li><a href="#">멤버십&제휴카드</a></li>
+                    </ul>   
+                </li>
+                <li><a href="#">투썸플레이스 APP</a>
+                    <ul>
+                        <li><a href="#">투썸플레이스 APP 소개</a></li>
+                    </ul>
+                </li>
+                <div id="menu"></div>   
+            </ul>            
+        </nav> 
+    </div>
+    </header>
+    <section>
+        <div id="main1">
+            <div id="main1ani1"></div>
+            <div id="main1ani2"></div>
+            <div id="main1ani3"></div>
+            <div id="main1ani4"></div>
+        </div>
+        <div id="main_map">
+            <ul>
+                <li><a href="#"><img src="images/페이스북12.png" alt="페이스북"></a></li>
+                <li><a href="#"><img src="images/인스타그램12.png" alt="인스타그램"></a></li>
+                <li><a href="#"><img src="images/멤버쉽12.png" alt="멤버쉽"></a></li>
+                <li><a href="#"><img src="images/제휴카드12.png" alt="제휴카드"></a></li>
+                <li><a href="#"><img src="images/온라인주문12.png" alt="온라인주문"></a></li>
+                <li><a href="#"><img src="images/매장찾기12.png" alt="매장찾기"></a></li>
+            </ul>
+        </div>
+        <div id="main2">
+            <div id="main2ani1"></div>
+            <div id="main2ani2">
+                <p>올 여름은 집에서 간편하게</p>
+                <p><span style="font-size:30px;color:darkblue;font-weight:bold;">에이리스트 스틱커피 아이스 블렌드</span></p>
+                <p>'슈퍼 드랍 공법'으로 원두 본연의 맛과 향을 담은<br>
+                    깔끔한 바디감과 산뜻한 과일향을 느껴보세요.</p>
+                    <div id="box1"><a href="#">자세히 보기</a></div>
+            </div>
+        </div>
+        <div id="main3">
+            <div id="main3ani1"></div>
+            <div id="main3ani2"></div>
+            <div id="main3ani3"></div>
+            <div id="main3ani4"></div>
+        </div>
+        <div id="main4">
+
+        </div>
+        <div id="main5">
+            <div id="main5_text">
+            <p>A cup of Coffe,</p>
+            <p>Two of Us,</p>
+            <p>Some Dessert,</p>
+            <p>Place,</p>
+            <div id="tw"><span style="font-size:50px;text-shadow:2px 2px 5px black;color:white">TWOSOME PLACE</span></p></div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <ul>
+            <li><a href="#">사이트맵</a></li>
+            <li><a href="#">리쿠르트</a></li>
+            <li><a href="#">이용약관</a></li>
+            <li><a href="#"><strong>개인정보처리방침</strong></a></li>
+            <li><a href="#">위치기반서비스 이용약관</a></li>
+            <li><a href="#">이메일 무단수집거부</a></li>
+            <li><a href="#">법적고지</a></li>
+        </ul>
+        <div id="ft1">
+            <p>서울특별시 중구 을지로 170,8층(을지로4가,을지로트윈타워)투썸플레이스(주)</p>
+            <p>대표이사:이영삼</p>
+            <p>개인정보보호책임자:장재호</p>
+            <p>고객센터:1577-4410</p>
+            <p>팩스:02-2058-6777</p>
+            <p>사업자등록번호:404-86-01054</p>
+        </div>
+        <div id="ft2">
+            <p>통신판매업종신고증:제 2018-서울중구-0353호</p>
+            <adress><span style="color:#e2dfd8;float:left;margin-left:20px;font-size:13px;">대표이메일:helpmaster@twosome.co.kr</adress>
+            <p>Copyright © 2021 A TWOCOME PLACE CO. LTD. ALL RIGHTS RESERVED.</p>
+        </div>
+    </footer>
+</body>
+</html>
